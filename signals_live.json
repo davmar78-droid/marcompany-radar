@@ -1,0 +1,12 @@
+{
+  "last_update": "2026-04-06 16:32:25",
+  "bot_status": "ACTIVO",
+  "signals_today": 0,
+  "pairs_monitored": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "recent_signals": []
+}
