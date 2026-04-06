@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marco Trading Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080c14;
+    --surface: #0d1420;
+    --surface2: #111b2e;
+    --border: #1e2d45;
+    --green: #00f5a0;
+    --red: #ff4466;
+    --yellow: #ffd94a;
+    --blue: #4488ff;
+    --text: #c8d8f0;
+    --muted: #4a6080;
+    --mono: 'Space Mono', monospace;
+    --sans: 'Syne', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(68,136,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(68,136,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .header-left h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #fff;
+  }
+
+  .header-left h1 span { color: var(--blue); }
+
+  .header-left p {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .status-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .status-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  .status-dot.offline {
+    background: var(--red);
+    box-shadow: 0 0 8px var(--red);
+    animation: none;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--blue);
+    opacity: 0.5;
+  }
+
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .stat-value.small { font-size: 18px; margin-top: 4px; }
+
+  .pairs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .pair-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--blue);
+    letter-spacing: 1px;
+  }
+
+  .section-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .update-time {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+
+  .signals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .signal-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .signal-card.long  { border-left: 3px solid var(--green); }
+  .signal-card.short { border-left: 3px solid var(--red); }
+
+  .signal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .signal-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .signal-symbol {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .signal-tf {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    background: var(--surface2);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+
+  .direction-badge {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+  }
+
+  .direction-badge.long  { background: rgba(0,245,160,0.1); color: var(--green); border: 1px solid rgba(0,245,160,0.3); }
+  .direction-badge.short { background: rgba(255,68,102,0.1); color: var(--red);   border: 1px solid rgba(255,68,102,0.3); }
+
+  .signal-meta { display: flex; align-items: center; gap: 12px; }
+
+  .strength-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .strength-badge.baja     { background: rgba(74,96,128,0.3);   color: var(--muted);  border: 1px solid var(--border); }
+  .strength-badge.media    { background: rgba(255,217,74,0.1);  color: var(--yellow); border: 1px solid rgba(255,217,74,0.3); }
+  .strength-badge.alta     { background: rgba(68,136,255,0.1);  color: var(--blue);   border: 1px solid rgba(68,136,255,0.3); }
+  .strength-badge.muy-alta { background: rgba(0,245,160,0.1);   color: var(--green);  border: 1px solid rgba(0,245,160,0.3); }
+
+  .signal-time {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .signal-body {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) { .signal-body { grid-template-columns: 1fr; } }
+
+  .prices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .price-item {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .price-item.full { grid-column: 1 / -1; }
+
+  .price-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .price-value {
+    font-family: var(--mono);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .price-value.green { color: var(--green); }
+  .price-value.red   { color: var(--red); }
+
+  .price-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  .confluencias { display: flex; flex-direction: column; gap: 7px; }
+
+  .conf-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+
+  .conf-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  .conf-item::before {
+    content: '✓';
+    color: var(--green);
+    font-size: 10px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .rr-section {
+    padding: 14px 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .rr-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .rr-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: var(--surface2);
+    border-radius: 3px;
+    overflow: hidden;
+    min-width: 80px;
+  }
+
+  .rr-bar {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--green));
+  }
+
+  .rr-value {
+    font-family: var(--mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--green);
+    white-space: nowrap;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed var(--border);
+    border-radius: 14px;
+  }
+
+  .empty-icon { font-size: 40px; opacity: 0.3; }
+
+  .empty-state p {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 12px;
+    letter-spacing: 1px;
+  }
+
+  .refresh-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--border);
+    z-index: 100;
+  }
+
+  .refresh-progress {
+    height: 100%;
+    background: var(--blue);
+    animation: prog 60s linear infinite;
+  }
+
+  @keyframes prog { from { width: 0% } to { width: 100% } }
+
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="refresh-bar"><div class="refresh-progress"></div></div>
+
+<div class="container">
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Marco <span>Trading</span> Dashboard</h1>
+      <p>Bybit Futures · Análisis técnico en tiempo real</p>
+    </div>
+    <div class="status-pill">
+      <div class="status-dot" id="statusDot"></div>
+      <span id="statusText">CARGANDO...</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="stat-label">Señales hoy</div>
+      <div class="stat-value" id="signalsToday">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Pares activos</div>
+      <div class="stat-value" id="pairsCount">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Última señal</div>
+      <div class="stat-value small" id="lastSignalTime">—</div>
+    </div>
+  </div>
+
+  <div class="pairs" id="pairsList"></div>
+
+  <div class="section-title">Últimas señales</div>
+  <div class="update-time" id="updateTime"></div>
+  <div class="signals-list" id="signalsList">
+    <div class="empty-state">
+      <div class="empty-icon">📡</div>
+      <p>CARGANDO DATOS...</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    Auto-refresco cada 60s · Solo para análisis técnico · Opera siempre con stop loss
+  </div>
+
+</div>
+
+<script>
+const JSON_URL = 'signals_live.json';
+
+function strengthClass(n) {
+  if (n >= 7) return 'muy-alta';
+  if (n >= 5) return 'alta';
+  if (n >= 4) return 'media';
+  return 'baja';
+}
+
+function strengthLabel(n) {
+  if (n >= 7) return '⚡ Muy alta';
+  if (n >= 5) return '▲ Alta';
+  if (n >= 4) return '◆ Media';
+  return '▼ Baja';
+}
+
+function fmt(p) {
+  if (p == null) return '—';
+  return '$' + parseFloat(p).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+}
+
+function pct(entry, target) {
+  if (!entry || !target) return '';
+  const p = (target - entry) / entry * 100;
+  return (p >= 0 ? '+' : '') + p.toFixed(2) + '%';
+}
+
+function renderSignal(s) {
+  const dir = (s.direction || '').toUpperCase();
+  const isLong = dir === 'LONG';
+  const sc = strengthClass(s.confluences);
+  const sl = strengthLabel(s.confluences);
+  const rr = s.rr_tp2 || 0;
+  const rrW = Math.min((rr / 5) * 100, 100);
+  const tf = s.timeframe ? (s.timeframe + (isNaN(s.timeframe) ? '' : 'm')) : '';
+  const ts = s.timestamp ? s.timestamp.replace('UTC','').trim() : '';
+
+  const tp1Html = s.tp1 ? `
+    <div class="price-item">
+      <div class="price-label">TP1</div>
+      <div class="price-value green">${fmt(s.tp1)}</div>
+      <div class="price-sub">${pct(s.entry_price, s.tp1)} · ${s.rr_tp1 || '—'}:1</div>
+    </div>` : '';
+
+  const confs = (s.confluence_detail || []).map(c => `<div class="conf-item">${c}</div>`).join('');
+
+  return `
+  <div class="signal-card ${dir.toLowerCase()}">
+    <div class="signal-header">
+      <div class="signal-title">
+        <span class="signal-symbol">${s.symbol || '—'}</span>
+        ${tf ? `<span class="signal-tf">${tf}</span>` : ''}
+        <span class="direction-badge ${dir.toLowerCase()}">${dir}</span>
+      </div>
+      <div class="signal-meta">
+        <span class="strength-badge ${sc}">${sl}</span>
+        ${ts ? `<span class="signal-time">${ts}</span>` : ''}
+      </div>
+    </div>
+
+    <div class="signal-body">
+      <div class="prices-grid">
+        <div class="price-item full">
+          <div class="price-label">Entrada</div>
+          <div class="price-value">${fmt(s.entry_price)}</div>
+        </div>
+        <div class="price-item">
+          <div class="price-label">Stop Loss</div>
+          <div class="price-value ${isLong ? 'red' : 'green'}">${fmt(s.sl)}</div>
+          <div class="price-sub">${pct(s.entry_price, s.sl)}</div>
+        </div>
+        ${tp1Html}
+        <div class="price-item">
+          <div class="price-label">TP2</div>
+          <div class="price-value green">${fmt(s.tp2)}</div>
+          <div class="price-sub">${pct(s.entry_price, s.tp2)} · ${rr}:1</div>
+        </div>
+      </div>
+
+      <div class="confluencias">
+        <div class="conf-title">Confluencias (${s.confluences || 0})</div>
+        ${confs || '<div class="conf-item" style="color:var(--muted)">Sin detalle</div>'}
+      </div>
+    </div>
+
+    <div class="rr-section">
+      <span class="rr-label">Ratio R/R</span>
+      <div class="rr-bar-wrap"><div class="rr-bar" style="width:${rrW}%"></div></div>
+      <span class="rr-value">${rr}:1</span>
+    </div>
+  </div>`;
+}
+
+async function loadData() {
+  try {
+    const r = await fetch(JSON_URL + '?t=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    const active = (data.bot_status || '').toUpperCase() === 'ACTIVO';
+    document.getElementById('statusDot').className = 'status-dot' + (active ? '' : ' offline');
+    document.getElementById('statusText').textContent = data.bot_status || '—';
+
+    document.getElementById('signalsToday').textContent = data.signals_today ?? '0';
+    document.getElementById('pairsCount').textContent = (data.pairs_monitored || []).length;
+
+    const sigs = data.recent_signals || [];
+    if (sigs.length > 0 && sigs[0].timestamp) {
+      const t = sigs[0].timestamp.replace('UTC','').trim().split(' ')[1] || '—';
+      document.getElementById('lastSignalTime').textContent = t + ' UTC';
+    } else {
+      document.getElementById('lastSignalTime').textContent = 'Sin señales';
+    }
+
+    document.getElementById('pairsList').innerHTML =
+      (data.pairs_monitored || []).map(p => `<span class="pair-tag">${p}</span>`).join('');
+
+    document.getElementById('updateTime').textContent =
+      'Actualizado: ' + (data.last_update || '—');
+
+    document.getElementById('signalsList').innerHTML = sigs.length
+      ? sigs.map(renderSignal).join('')
+      : `<div class="empty-state"><div class="empty-icon">📡</div><p>SIN SEÑALES RECIENTES · EL BOT ESTÁ ANALIZANDO</p></div>`;
+
+  } catch (e) {
+    document.getElementById('statusDot').className = 'status-dot offline';
+    document.getElementById('statusText').textContent = 'ERROR';
+    document.getElementById('signalsList').innerHTML =
+      `<div class="empty-state"><div class="empty-icon">⚠️</div><p>NO SE PUEDE CARGAR signals_live.json · ${e.message}</p></div>`;
+  }
+}
+
+loadData();
+setInterval(loadData, 60000);
+</script>
+</body>
+</html>
