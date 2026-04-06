@@ -1,124 +1,12 @@
 {
-  "last_update": "2026-04-06 20:15:48",
+  "last_update": "2026-04-06 21:06:24",
   "bot_status": "ACTIVO",
-  "signals_today": 6,
+  "signals_today": 0,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
-    "SOLUSDT"
+    "SOLUSDT",
+    "XRPUSDT"
   ],
-  "recent_signals": [
-    {
-      "symbol": "SOLUSDT",
-      "timeframe": "60m",
-      "direction": "SHORT",
-      "entry_price": 82.0,
-      "sl": 83.0177,
-      "tp1": 81.1,
-      "tp2": 75.5716,
-      "rr_tp1": 0.88,
-      "rr_tp2": 6.32,
-      "confluences": 2,
-      "confluence_detail": [
-        "Order Block bajista 81.8-82.4",
-        "Fibonacci 0.236"
-      ],
-      "strength": "Baja",
-      "timestamp": "2026-04-06 20:15 UTC"
-    },
-    {
-      "symbol": "SOLUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 82.01,
-      "sl": 82.5014,
-      "tp1": 81.67,
-      "tp2": 79.8269,
-      "rr_tp1": 0.69,
-      "rr_tp2": 4.44,
-      "confluences": 3,
-      "confluence_detail": [
-        "EMA9 < EMA21 bajista",
-        "Pin Bar bajista",
-        "Order Block bajista 81.7-81.9"
-      ],
-      "strength": "Baja",
-      "timestamp": "2026-04-06 20:15 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 2145.46,
-      "sl": 2117.1599,
-      "tp1": 2169.53,
-      "tp2": 2244.5105,
-      "rr_tp1": 0.85,
-      "rr_tp2": 3.5,
-      "confluences": 2,
-      "confluence_detail": [
-        "EMA9 > EMA21 alcista",
-        "Soporte 2136.6"
-      ],
-      "strength": "Baja",
-      "timestamp": "2026-04-06 20:15 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2145.55,
-      "sl": 2159.2299,
-      "tp1": 2136.55,
-      "tp2": 2089.1959,
-      "rr_tp1": 0.66,
-      "rr_tp2": 4.12,
-      "confluences": 4,
-      "confluence_detail": [
-        "EMA9 < EMA21 bajista",
-        "Shooting Star",
-        "Order Block bajista 2138.2-2144.8",
-        "Resistencia 2153.3"
-      ],
-      "strength": "Media",
-      "timestamp": "2026-04-06 20:15 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 69747.3,
-      "sl": 68995.6106,
-      "tp1": 70250.0,
-      "tp2": 72378.2128,
-      "rr_tp1": 0.67,
-      "rr_tp2": 3.5,
-      "confluences": 2,
-      "confluence_detail": [
-        "EMA9 > EMA21 alcista",
-        "Pin Bar alcista"
-      ],
-      "strength": "Baja",
-      "timestamp": "2026-04-06 20:15 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 69752.6,
-      "sl": 69366.7976,
-      "tp1": 70250.0,
-      "tp2": 71102.9084,
-      "rr_tp1": 1.29,
-      "rr_tp2": 3.5,
-      "confluences": 3,
-      "confluence_detail": [
-        "EMA9 > EMA21 alcista",
-        "Order Block alcista 69273.0-69784.0",
-        "Soporte 69532.7"
-      ],
-      "strength": "Baja",
-      "timestamp": "2026-04-06 20:15 UTC"
-    }
-  ]
+  "recent_signals": []
 }
