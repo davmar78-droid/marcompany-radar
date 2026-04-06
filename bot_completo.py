@@ -146,13 +146,14 @@ CONFLUENCIAS ({signal["confluences"]}):
 Opera con stop loss"""
 
 
+
 def export_to_web():
     try:
-        import json
+        import json, subprocess
         from datetime import datetime
         signals_data = {
             "last_update": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "bot_status": "ACTIVO",
+            "bot_status": "ACTIVO", 
             "signals_today": 0,
             "pairs_monitored": ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT"],
             "recent_signals": []
@@ -160,7 +161,13 @@ def export_to_web():
         
         with open("signals_live.json", "w") as f:
             json.dump(signals_data, f, indent=2)
-        log.info("📊 Dashboard actualizado")
+        
+        # Auto push a GitHub
+        subprocess.run(["git", "add", "signals_live.json"], capture_output=True)
+        subprocess.run(["git", "commit", "-m", "Update live data"], capture_output=True)
+        subprocess.run(["git", "push"], capture_output=True)
+        
+        log.info("📊 Dashboard + GitHub actualizados")
     except Exception as e:
         log.error(f"Error export: {e}")
 
