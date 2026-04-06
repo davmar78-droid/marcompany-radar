@@ -1,12 +1,27 @@
 {
-  "last_update": "2026-04-06 16:39:32",
+  "last_update": "2026-04-06 16:46:54",
   "bot_status": "ACTIVO",
-  "signals_today": 0,
+  "signals_today": 1,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
     "SOLUSDT",
     "XRPUSDT"
   ],
-  "recent_signals": []
+  "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "direction": "LONG",
+      "entry_price": 69350.0,
+      "tp2": 72100.0,
+      "rr_tp2": 3.2,
+      "confluences": 4,
+      "confluence_detail": [
+        "RSI 32.1 sobrevendido",
+        "MACD cruce alcista",
+        "EMA9 > EMA21",
+        "Order Block alcista"
+      ]
+    }
+  ]
 }
