@@ -1,13 +1,31 @@
 {
-  "last_update": "2026-04-06 20:15:32",
+  "last_update": "2026-04-06 20:15:35",
   "bot_status": "ACTIVO",
-  "signals_today": 1,
+  "signals_today": 2,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
     "SOLUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 69747.3,
+      "sl": 68995.6106,
+      "tp1": 70250.0,
+      "tp2": 72378.2128,
+      "rr_tp1": 0.67,
+      "rr_tp2": 3.5,
+      "confluences": 2,
+      "confluence_detail": [
+        "EMA9 > EMA21 alcista",
+        "Pin Bar alcista"
+      ],
+      "strength": "Baja",
+      "timestamp": "2026-04-06 20:15 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
