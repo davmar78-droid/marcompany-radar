@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-07 15:53:58",
+  "last_update": "2026-04-07 15:55:04",
   "bot_status": "ACTIVO",
-  "signals_today": 1,
+  "signals_today": 2,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 68126.7,
+      "sl": 67888.7406,
+      "tp1": 68602.6188,
+      "tp2": 69078.5376,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 4,
+      "confluence_detail": [
+        "🔀 MACD cruce alcista",
+        "🧱 Order Block alcista 68020.10-68446.60",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 68140.00-68155.70"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-07 15:55 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
