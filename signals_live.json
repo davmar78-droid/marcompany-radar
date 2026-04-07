@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-07 18:57:21",
+  "last_update": "2026-04-07 18:57:28",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 79.64,
+      "sl": 80.0548,
+      "tp1": 78.8104,
+      "tp2": 75.9283,
+      "rr_tp1": 2.0,
+      "rr_tp2": 8.95,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 56.7 zona de venta",
+        "🧱 Order Block bajista 79.19-79.50",
+        "🚧 Resistencia clave 79.85",
+        "⚡ Imbalance bajista 79.48-79.79"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-07 20:57 hora española"
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -193,27 +213,6 @@
         "⚡ Imbalance alcista 80.09-80.27"
       ],
       "strength": "◆ MEDIA",
-      "timestamp": "2026-04-07 20:10 hora española"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2094.3,
-      "sl": 2110.7186,
-      "tp1": 2061.4628,
-      "tp2": 1999.3923,
-      "rr_tp1": 2.0,
-      "rr_tp2": 5.78,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 56.8 zona de venta",
-        "🧱 Order Block bajista 2082.85-2093.02",
-        "🚧 Resistencia clave 2105.43",
-        "🕯️ Engulfing bajista",
-        "⚡ Imbalance bajista 2085.63-2095.25"
-      ],
-      "strength": "⚡ ALTA",
       "timestamp": "2026-04-07 20:10 hora española"
     }
   ]
