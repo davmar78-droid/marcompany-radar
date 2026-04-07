@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-07 15:55:23",
+  "last_update": "2026-04-07 16:03:23",
   "bot_status": "ACTIVO",
-  "signals_today": 5,
+  "signals_today": 6,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 79.05,
+      "sl": 78.1594,
+      "tp1": 80.8312,
+      "tp2": 82.6124,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 38.6 zona de compra",
+        "🔁 Divergencia alcista RSI",
+        "🧱 Order Block alcista 79.24-79.59",
+        "🌀 Fibonacci 0.786"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-07 16:03 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
