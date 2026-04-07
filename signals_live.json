@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-07 19:42:08",
+  "last_update": "2026-04-07 19:42:15",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 1.3053,
+      "sl": 1.2979,
+      "tp1": 1.3201,
+      "tp2": 1.3349,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 43.4 zona de compra",
+        "🧱 Order Block alcista 1.30-1.31",
+        "🌀 Fibonacci 0.618",
+        "⚡ Imbalance alcista 1.31-1.32",
+        "🎯 Precio en VAL 1.30"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-07 21:42 hora española"
+    },
     {
       "symbol": "SOLUSDT",
       "timeframe": "60m",
@@ -191,27 +212,6 @@
         "⚡ Imbalance alcista 1.31-1.32"
       ],
       "strength": "◆ MEDIA",
-      "timestamp": "2026-04-07 20:10 hora española"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 1.307,
-      "sl": 1.301,
-      "tp1": 1.319,
-      "tp2": 1.331,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 5,
-      "confluence_detail": [
-        "📈 MACD histograma creciendo",
-        "🧱 Order Block alcista 1.30-1.31",
-        "🛡️ Soporte clave 1.30",
-        "🌀 Fibonacci 0.786",
-        "⚡ Imbalance alcista 1.31-1.31"
-      ],
-      "strength": "⚡ ALTA",
       "timestamp": "2026-04-07 20:10 hora española"
     }
   ]
