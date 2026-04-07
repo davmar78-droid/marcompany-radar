@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-07 18:56:12",
+  "last_update": "2026-04-07 18:57:21",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 2084.42,
+      "sl": 2075.9214,
+      "tp1": 2101.4172,
+      "tp2": 2118.4144,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 4,
+      "confluence_detail": [
+        "🧱 Order Block alcista 2080.90-2087.40",
+        "🛡️ Soporte clave 2078.59",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 2090.37-2092.36"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-07 20:57 hora española"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
@@ -194,26 +214,6 @@
         "⚡ Imbalance bajista 2085.63-2095.25"
       ],
       "strength": "⚡ ALTA",
-      "timestamp": "2026-04-07 20:10 hora española"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "SHORT",
-      "entry_price": 68599.1,
-      "sl": 68821.9962,
-      "tp1": 68153.3076,
-      "tp2": 64228.0554,
-      "rr_tp1": 2.0,
-      "rr_tp2": 19.61,
-      "confluences": 4,
-      "confluence_detail": [
-        "🧱 Order Block bajista 68020.10-68591.60",
-        "🚧 Resistencia clave 68944.00",
-        "⚡ Imbalance bajista 68424.40-68587.60",
-        "🎯 Precio en VAH 68546.37"
-      ],
-      "strength": "◆ MEDIA",
       "timestamp": "2026-04-07 20:10 hora española"
     }
   ]
