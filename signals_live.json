@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 18:20:22",
+  "last_update": "2026-04-08 18:20:55",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,28 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "60m",
+      "direction": "SHORT",
+      "entry_price": 1.3539,
+      "sl": 1.3628,
+      "tp1": 1.3361,
+      "tp2": 1.2037,
+      "rr_tp1": 2.0,
+      "rr_tp2": 16.88,
+      "confluences": 6,
+      "confluence_detail": [
+        "📉 MACD histograma cayendo",
+        "🚧 Resistencia clave 1.36",
+        "🌀 Fibonacci 0.382",
+        "🕯️ Engulfing bajista",
+        "⚡ Imbalance bajista 1.34-1.37",
+        "🎯 Precio en VAH 1.35"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 18:20 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "60m",
@@ -201,27 +223,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 17:09 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "60m",
-      "direction": "SHORT",
-      "entry_price": 2220.15,
-      "sl": 2264.1798,
-      "tp1": 2132.0904,
-      "tp2": 1863.2172,
-      "rr_tp1": 2.0,
-      "rr_tp2": 8.11,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 55.5 zona de venta",
-        "📉 MACD histograma cayendo",
-        "🌀 Fibonacci 0.236",
-        "📌 Pin Bar bajista",
-        "⚡ Imbalance bajista 2218.91-2219.63"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 17:05 UTC"
     }
   ]
 }
