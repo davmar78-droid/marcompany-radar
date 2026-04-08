@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 03:22:49",
+  "last_update": "2026-04-08 03:29:47",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 84.62,
+      "sl": 84.3502,
+      "tp1": 85.1596,
+      "tp2": 85.6992,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 5,
+      "confluence_detail": [
+        "✅ Tendencia alcista EMA9>21>50",
+        "🧱 Order Block alcista 84.62-84.89",
+        "🛡️ Soporte clave 84.25",
+        "🕯️ Engulfing alcista",
+        "⚡ Imbalance alcista 84.78-84.87"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 03:29 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
@@ -194,27 +215,6 @@
         "🧱 Order Block bajista 84.47-84.95",
         "🌀 Fibonacci 0.236",
         "💫 Shooting Star"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 01:49 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2236.72,
-      "sl": 2250.3698,
-      "tp1": 2209.4204,
-      "tp2": 1925.7206,
-      "rr_tp1": 2.0,
-      "rr_tp2": 22.78,
-      "confluences": 5,
-      "confluence_detail": [
-        "📈 RSI 69.8 sobrecomprado",
-        "📉 MACD histograma cayendo",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 2231.00-2242.46",
-        "📌 Pin Bar bajista"
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 01:49 UTC"
