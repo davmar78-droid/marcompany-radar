@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 12:20:09",
+  "last_update": "2026-04-08 12:30:22",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,28 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 71710.3,
+      "sl": 71973.1606,
+      "tp1": 71184.5788,
+      "tp2": 64534.9868,
+      "rr_tp1": 2.0,
+      "rr_tp2": 27.3,
+      "confluences": 6,
+      "confluence_detail": [
+        "🧱 Order Block bajista 71488.00-71638.00",
+        "🚧 Resistencia clave 71879.80",
+        "🌀 Fibonacci 0.236",
+        "🌆 Evening Star",
+        "⚡ Imbalance bajista 71630.90-71650.00",
+        "🎯 Precio en VAH 71745.00"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 12:30 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
@@ -206,28 +228,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 11:29 UTC"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "60m",
-      "direction": "SHORT",
-      "entry_price": 1.3796,
-      "sl": 1.3926,
-      "tp1": 1.3536,
-      "tp2": 1.2037,
-      "rr_tp1": 2.0,
-      "rr_tp2": 13.53,
-      "confluences": 6,
-      "confluence_detail": [
-        "📈 RSI 66.9 sobrecomprado",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 1.37-1.40",
-        "🚧 Resistencia clave 1.39",
-        "🕯️ Engulfing bajista",
-        "⚡ Imbalance bajista 1.38-1.38"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 11:26 UTC"
     }
   ]
 }
