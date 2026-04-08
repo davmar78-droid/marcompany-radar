@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 13:06:32",
+  "last_update": "2026-04-08 13:09:57",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,29 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 84.78,
+      "sl": 85.135,
+      "tp1": 84.07,
+      "tp2": 72.9558,
+      "rr_tp1": 2.0,
+      "rr_tp2": 33.31,
+      "confluences": 7,
+      "confluence_detail": [
+        "📊 RSI 55.7 zona de venta",
+        "🧱 Order Block bajista 84.38-84.58",
+        "🚧 Resistencia clave 85.00",
+        "🌀 Fibonacci 0.236",
+        "⚡ Imbalance bajista 84.69-84.71",
+        "📊 Spike de volumen",
+        "🎯 Precio en VAH 84.47"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-08 13:09 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
@@ -201,27 +224,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 11:54 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2240.74,
-      "sl": 2249.0693,
-      "tp1": 2224.0814,
-      "tp2": 1925.7206,
-      "rr_tp1": 2.0,
-      "rr_tp2": 37.82,
-      "confluences": 5,
-      "confluence_detail": [
-        "📉 MACD histograma cayendo",
-        "🧱 Order Block bajista 2240.01-2244.74",
-        "🚧 Resistencia clave 2246.87",
-        "⚡ Imbalance bajista 2236.48-2241.15",
-        "🎯 Precio en VAH 2231.44"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 11:47 UTC"
     }
   ]
 }
