@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 03:08:06",
+  "last_update": "2026-04-08 03:22:46",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 1.3688,
+      "sl": 1.3792,
+      "tp1": 1.348,
+      "tp2": 1.2309,
+      "rr_tp1": 2.0,
+      "rr_tp2": 13.26,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 58.7 zona de venta",
+        "📉 MACD histograma cayendo",
+        "🚧 Resistencia clave 1.38",
+        "🌀 Fibonacci 0.236",
+        "⚡ Imbalance bajista 1.36-1.37"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 03:22 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
@@ -197,27 +218,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 01:32 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 71846.6,
-      "sl": 72865.058,
-      "tp1": 69809.684,
-      "tp2": 64534.9868,
-      "rr_tp1": 2.0,
-      "rr_tp2": 7.18,
-      "confluences": 5,
-      "confluence_detail": [
-        "📈 RSI 71.0 sobrecomprado",
-        "🔁 Divergencia bajista RSI",
-        "🌀 Fibonacci 0.236",
-        "📌 Pin Bar bajista",
-        "⚡ Imbalance bajista 71700.00-71888.00"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 00:09 UTC"
     }
   ]
 }
