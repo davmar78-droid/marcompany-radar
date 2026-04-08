@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 14:25:12",
+  "last_update": "2026-04-08 14:28:14",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 71485.5,
+      "sl": 71876.4298,
+      "tp1": 70703.6404,
+      "tp2": 64483.322,
+      "rr_tp1": 2.0,
+      "rr_tp2": 17.91,
+      "confluences": 5,
+      "confluence_detail": [
+        "📉 MACD histograma cayendo",
+        "🚧 Resistencia clave 71710.00",
+        "🌀 Fibonacci 0.236",
+        "⚡ Imbalance bajista 71330.00-71441.00",
+        "🎯 Precio en VAH 71555.83"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 14:28 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
@@ -206,27 +227,6 @@
       ],
       "strength": "🔥 MUY ALTA",
       "timestamp": "2026-04-08 13:09 UTC"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 1.3829,
-      "sl": 1.375,
-      "tp1": 1.3987,
-      "tp2": 1.4145,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 5,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 1.38-1.38",
-        "🛡️ Soporte clave 1.38",
-        "🕯️ Engulfing alcista",
-        "⚡ Imbalance alcista 1.38-1.38"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 13:06 UTC"
     }
   ]
 }
