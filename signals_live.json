@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 21:11:41",
+  "last_update": "2026-04-08 21:11:47",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "240m",
+      "direction": "SHORT",
+      "entry_price": 1.3512,
+      "sl": 1.3641,
+      "tp1": 1.3254,
+      "tp2": 1.1605,
+      "rr_tp1": 2.0,
+      "rr_tp2": 14.78,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 55.0 zona de venta",
+        "🧱 Order Block bajista 1.34-1.35",
+        "🚧 Resistencia clave 1.36",
+        "⚡ Imbalance bajista 1.32-1.36"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-08 21:11 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
@@ -198,27 +218,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 18:51 UTC"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 1.3517,
-      "sl": 1.3645,
-      "tp1": 1.3261,
-      "tp2": 1.1605,
-      "rr_tp1": 2.0,
-      "rr_tp2": 14.94,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 55.2 zona de venta",
-        "🧱 Order Block bajista 1.34-1.35",
-        "🚧 Resistencia clave 1.36",
-        "📌 Pin Bar bajista",
-        "⚡ Imbalance bajista 1.32-1.36"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 18:48 UTC"
     }
   ]
 }
