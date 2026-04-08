@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 07:37:25",
+  "last_update": "2026-04-08 07:40:59",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,29 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 71640.7,
+      "sl": 72037.2291,
+      "tp1": 70847.6418,
+      "tp2": 64534.9868,
+      "rr_tp1": 2.0,
+      "rr_tp2": 17.92,
+      "confluences": 7,
+      "confluence_detail": [
+        "📊 RSI 56.1 zona de venta",
+        "📉 MACD histograma cayendo",
+        "🚧 Resistencia clave 71928.30",
+        "🌀 Fibonacci 0.236",
+        "🕯️ Engulfing bajista",
+        "⚡ Imbalance bajista 71330.00-71441.00",
+        "🎯 Precio en VAH 71474.86"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-08 07:40 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
@@ -206,27 +229,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 06:30 UTC"
-    },
-    {
-      "symbol": "SOLUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 84.18,
-      "sl": 83.6343,
-      "tp1": 85.2714,
-      "tp2": 86.3628,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 5,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 84.42-84.57",
-        "📌 Pin Bar alcista",
-        "⚡ Imbalance alcista 84.24-84.51",
-        "📊 Spike de volumen"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 06:08 UTC"
     }
   ]
 }
