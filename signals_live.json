@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-08 17:41:31",
+  "last_update": "2026-04-08 17:44:48",
   "bot_status": "ACTIVO",
-  "signals_today": 9,
+  "signals_today": 10,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "Dm",
+      "direction": "SHORT",
+      "entry_price": 71803.6,
+      "sl": 73289.1068,
+      "tp1": 68832.5864,
+      "tp2": 36357.5264,
+      "rr_tp1": 2.0,
+      "rr_tp2": 23.86,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 58.9 zona de venta",
+        "🧱 Order Block bajista 70379.20-71984.80",
+        "🚧 Resistencia clave 71984.80",
+        "⚡ Imbalance bajista 71263.80-72226.30"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-08 17:44 UTC"
+    },
     {
       "symbol": "SOLUSDT",
       "timeframe": "240m",
