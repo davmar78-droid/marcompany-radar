@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 03:22:46",
+  "last_update": "2026-04-08 03:22:49",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "60m",
+      "direction": "SHORT",
+      "entry_price": 1.3687,
+      "sl": 1.3953,
+      "tp1": 1.3155,
+      "tp2": 1.2037,
+      "rr_tp1": 2.0,
+      "rr_tp2": 6.2,
+      "confluences": 5,
+      "confluence_detail": [
+        "📈 RSI 67.3 sobrecomprado",
+        "🧱 Order Block bajista 1.37-1.40",
+        "🌀 Fibonacci 0.236",
+        "🕯️ Engulfing bajista",
+        "⚡ Imbalance bajista 1.34-1.37"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 03:22 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
@@ -197,27 +218,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 01:49 UTC"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 1.3653,
-      "sl": 1.3549,
-      "tp1": 1.3861,
-      "tp2": 1.4069,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 5,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 1.37-1.38",
-        "🛡️ Soporte clave 1.36",
-        "📌 Pin Bar alcista",
-        "⚡ Imbalance alcista 1.37-1.37"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 01:32 UTC"
     }
   ]
 }
