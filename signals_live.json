@@ -1,76 +1,12 @@
 {
-  "last_update": "2026-04-08 03:37:55",
+  "last_update": "2026-04-08 03:39:56",
   "bot_status": "ACTIVO",
-  "signals_today": 3,
+  "signals_today": 0,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
     "SOLUSDT",
     "XRPUSDT"
   ],
-  "recent_signals": [
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 1.3718,
-      "sl": 1.3774,
-      "tp1": 1.3606,
-      "tp2": 1.2309,
-      "rr_tp1": 2.0,
-      "rr_tp2": 25.16,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 61.2 zona de venta",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 1.37-1.37",
-        "🚧 Resistencia clave 1.38",
-        "🌀 Fibonacci 0.236"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 03:37 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2235.9,
-      "sl": 2248.8608,
-      "tp1": 2209.9784,
-      "tp2": 1925.7206,
-      "rr_tp1": 2.0,
-      "rr_tp2": 23.93,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 63.4 zona de venta",
-        "📉 MACD histograma cayendo",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 2231.00-2242.46",
-        "🚧 Resistencia clave 2246.87"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 03:37 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 71343.7,
-      "sl": 71531.9913,
-      "tp1": 70967.1174,
-      "tp2": 64534.9868,
-      "rr_tp1": 2.0,
-      "rr_tp2": 36.16,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 56.7 zona de venta",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 71253.60-71371.60",
-        "🚧 Resistencia clave 71710.00",
-        "🌀 Fibonacci 0.236"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 03:37 UTC"
-    }
-  ]
+  "recent_signals": []
 }
