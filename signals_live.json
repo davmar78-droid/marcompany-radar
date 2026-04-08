@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 12:38:05",
+  "last_update": "2026-04-08 12:41:16",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 2252.49,
+      "sl": 2259.0599,
+      "tp1": 2239.3502,
+      "tp2": 1925.7206,
+      "rr_tp1": 2.0,
+      "rr_tp2": 49.74,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 55.3 zona de venta",
+        "🧱 Order Block bajista 2243.22-2254.49",
+        "🚧 Resistencia clave 2259.93",
+        "⚡ Imbalance bajista 2241.45-2246.64",
+        "🎯 Precio en VAH 2242.01"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 12:41 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
@@ -205,29 +226,6 @@
       ],
       "strength": "🔥 MUY ALTA",
       "timestamp": "2026-04-08 11:40 UTC"
-    },
-    {
-      "symbol": "SOLUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 84.69,
-      "sl": 85.0894,
-      "tp1": 83.8912,
-      "tp2": 72.9558,
-      "rr_tp1": 2.0,
-      "rr_tp2": 29.38,
-      "confluences": 7,
-      "confluence_detail": [
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 84.35-84.68",
-        "🚧 Resistencia clave 84.93",
-        "🌀 Fibonacci 0.236",
-        "⚡ Imbalance bajista 84.69-84.71",
-        "📊 Spike de volumen",
-        "🎯 Precio en VAH 84.47"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-08 11:29 UTC"
     }
   ]
 }
