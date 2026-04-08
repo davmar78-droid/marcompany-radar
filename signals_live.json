@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 08:49:27",
+  "last_update": "2026-04-08 09:10:34",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 84.75,
+      "sl": 85.095,
+      "tp1": 84.06,
+      "tp2": 72.9558,
+      "rr_tp1": 2.0,
+      "rr_tp2": 34.19,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 57.1 zona de venta",
+        "🧱 Order Block bajista 84.35-84.68",
+        "🚧 Resistencia clave 84.93",
+        "🌀 Fibonacci 0.236",
+        "⚡ Imbalance bajista 84.69-84.71"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 09:10 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
@@ -206,28 +227,6 @@
       ],
       "strength": "🔥 MUY ALTA",
       "timestamp": "2026-04-08 07:44 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2249.15,
-      "sl": 2264.7087,
-      "tp1": 2218.0326,
-      "tp2": 1925.7206,
-      "rr_tp1": 2.0,
-      "rr_tp2": 20.79,
-      "confluences": 6,
-      "confluence_detail": [
-        "📊 RSI 60.7 zona de venta",
-        "📉 MACD histograma cayendo",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 2240.01-2244.74",
-        "🕯️ Engulfing bajista",
-        "⚡ Imbalance bajista 2241.45-2246.64"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 07:41 UTC"
     }
   ]
 }
