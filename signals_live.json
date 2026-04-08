@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 15:18:52",
+  "last_update": "2026-04-08 15:21:56",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,28 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "240m",
+      "direction": "SHORT",
+      "entry_price": 71115.5,
+      "sl": 71942.8633,
+      "tp1": 69460.7734,
+      "tp2": 60044.6626,
+      "rr_tp1": 2.0,
+      "rr_tp2": 13.38,
+      "confluences": 6,
+      "confluence_detail": [
+        "📊 RSI 64.8 zona de venta",
+        "🚧 Resistencia clave 71393.80",
+        "🌀 Fibonacci 0.236",
+        "🌆 Evening Star",
+        "⚡ Imbalance bajista 69089.50-71201.10",
+        "📊 Spike de volumen"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 15:21 UTC"
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "240m",
@@ -199,29 +221,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 13:53 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 71755.9,
-      "sl": 72084.2294,
-      "tp1": 71099.2412,
-      "tp2": 64483.322,
-      "rr_tp1": 2.0,
-      "rr_tp2": 22.15,
-      "confluences": 7,
-      "confluence_detail": [
-        "🧱 Order Block bajista 71488.00-71638.00",
-        "🚧 Resistencia clave 71928.30",
-        "🌀 Fibonacci 0.236",
-        "🌆 Evening Star",
-        "⚡ Imbalance bajista 71630.90-71650.00",
-        "🔥 Volumen climático",
-        "🎯 Precio en VAH 71555.83"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-08 13:41 UTC"
     }
   ]
 }
