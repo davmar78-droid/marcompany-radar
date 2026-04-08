@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-08 01:49:48",
+  "last_update": "2026-04-08 01:50:00",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 84.72,
+      "sl": 85.275,
+      "tp1": 83.61,
+      "tp2": 72.9558,
+      "rr_tp1": 2.0,
+      "rr_tp2": 21.2,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 61.4 zona de venta",
+        "📉 MACD histograma cayendo",
+        "🧱 Order Block bajista 84.47-84.95",
+        "🌀 Fibonacci 0.236",
+        "💫 Shooting Star"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-08 01:49 UTC"
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -199,27 +220,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-07 21:50 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "SHORT",
-      "entry_price": 69545.6,
-      "sl": 69831.5494,
-      "tp1": 68973.7012,
-      "tp2": 64228.0554,
-      "rr_tp1": 2.0,
-      "rr_tp2": 18.6,
-      "confluences": 5,
-      "confluence_detail": [
-        "📊 RSI 61.8 zona de venta",
-        "🧱 Order Block bajista 69000.90-69564.00",
-        "🌀 Fibonacci 0.236",
-        "💫 Shooting Star",
-        "⚡ Imbalance bajista 69349.20-69652.50"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-07 21:29 UTC"
     }
   ]
 }
