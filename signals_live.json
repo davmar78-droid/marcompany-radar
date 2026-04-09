@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 03:33:11",
+  "last_update": "2026-04-09 04:05:42",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,27 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 81.95,
+      "sl": 81.3203,
+      "tp1": 83.2094,
+      "tp2": 84.96,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.78,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 38.9 zona de compra",
+        "🛡️ Soporte clave 81.65",
+        "🌀 Fibonacci 0.618",
+        "🔨 Hammer",
+        "⚡ Imbalance alcista 81.97-82.01"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-09 04:05 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "240m",
@@ -200,28 +221,6 @@
       ],
       "strength": "◆ MEDIA",
       "timestamp": "2026-04-09 00:02 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 71094.3,
-      "sl": 71930.9023,
-      "tp1": 69421.0954,
-      "tp2": 60044.6626,
-      "rr_tp1": 2.0,
-      "rr_tp2": 13.21,
-      "confluences": 6,
-      "confluence_detail": [
-        "📊 RSI 64.2 zona de venta",
-        "🚧 Resistencia clave 71393.80",
-        "🌀 Fibonacci 0.236",
-        "🕯️ Engulfing bajista",
-        "⚡ Imbalance bajista 69089.50-71201.10",
-        "🎯 Precio en VAH 70942.05"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-08 23:58 UTC"
     }
   ]
 }
