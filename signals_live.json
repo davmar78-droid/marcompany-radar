@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 02:46:44",
+  "last_update": "2026-04-09 02:50:19",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,29 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 2182.41,
+      "sl": 2172.8548,
+      "tp1": 2201.5204,
+      "tp2": 2254.49,
+      "rr_tp1": 2.0,
+      "rr_tp2": 7.54,
+      "confluences": 7,
+      "confluence_detail": [
+        "📊 RSI 44.2 zona de compra",
+        "📈 MACD histograma creciendo",
+        "🧱 Order Block alcista 2173.07-2182.52",
+        "🛡️ Soporte clave 2177.66",
+        "🌀 Fibonacci 0.786",
+        "🕯️ Engulfing alcista",
+        "⚡ Imbalance alcista 2186.54-2187.08"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-09 02:50 UTC"
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -198,26 +221,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 23:12 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 2192.8,
-      "sl": 2219.7102,
-      "tp1": 2138.9796,
-      "tp2": 1727.9201,
-      "rr_tp1": 2.0,
-      "rr_tp2": 17.28,
-      "confluences": 4,
-      "confluence_detail": [
-        "📊 RSI 59.3 zona de venta",
-        "🚧 Resistencia clave 2198.21",
-        "🌀 Fibonacci 0.236",
-        "⚡ Imbalance bajista 2115.99-2226.78"
-      ],
-      "strength": "◆ MEDIA",
-      "timestamp": "2026-04-08 22:29 UTC"
     }
   ]
 }
