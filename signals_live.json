@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 03:26:08",
+  "last_update": "2026-04-09 03:33:11",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "240m",
+      "direction": "SHORT",
+      "entry_price": 70907.8,
+      "sl": 71919.195,
+      "tp1": 68885.01,
+      "tp2": 60044.6626,
+      "rr_tp1": 2.0,
+      "rr_tp2": 10.74,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 62.2 zona de venta",
+        "🌀 Fibonacci 0.236",
+        "⚡ Imbalance bajista 69089.50-71201.10",
+        "🎯 Precio en VAH 70942.05"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-09 03:33 UTC"
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -202,26 +222,6 @@
       ],
       "strength": "⚡ ALTA",
       "timestamp": "2026-04-08 23:58 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 2190.97,
-      "sl": 2220.0498,
-      "tp1": 2132.8104,
-      "tp2": 1727.9201,
-      "rr_tp1": 2.0,
-      "rr_tp2": 15.92,
-      "confluences": 4,
-      "confluence_detail": [
-        "📊 RSI 58.9 zona de venta",
-        "🚧 Resistencia clave 2198.21",
-        "🌀 Fibonacci 0.236",
-        "⚡ Imbalance bajista 2115.99-2226.78"
-      ],
-      "strength": "◆ MEDIA",
-      "timestamp": "2026-04-08 23:15 UTC"
     }
   ]
 }
