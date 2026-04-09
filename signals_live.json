@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 02:00:08",
+  "last_update": "2026-04-09 02:25:28",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "240m",
+      "direction": "LONG",
+      "entry_price": 82.3,
+      "sl": 81.1199,
+      "tp1": 84.6602,
+      "tp2": 87.0204,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 4,
+      "confluence_detail": [
+        "🧱 Order Block alcista 80.91-82.32",
+        "🛡️ Soporte clave 81.93",
+        "🔨 Hammer",
+        "⚡ Imbalance alcista 81.73-82.95"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-09 02:25 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "240m",
@@ -192,26 +212,6 @@
       ],
       "strength": "◆ MEDIA",
       "timestamp": "2026-04-08 21:57 UTC"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 71682.7,
-      "sl": 72477.0095,
-      "tp1": 70094.081,
-      "tp2": 60044.6626,
-      "rr_tp1": 2.0,
-      "rr_tp2": 14.65,
-      "confluences": 4,
-      "confluence_detail": [
-        "📈 RSI 68.5 sobrecomprado",
-        "🔁 Divergencia bajista RSI",
-        "🧱 Order Block bajista 71341.30-71953.20",
-        "🚧 Resistencia clave 71984.80"
-      ],
-      "strength": "◆ MEDIA",
-      "timestamp": "2026-04-08 21:29 UTC"
     }
   ]
 }
