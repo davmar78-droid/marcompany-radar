@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 19:15:02",
+  "last_update": "2026-04-09 19:28:02",
   "bot_status": "ACTIVO",
   "signals_today": 0,
   "pairs_monitored": [
@@ -8,10 +8,5 @@
     "SOLUSDT",
     "XRPUSDT"
   ],
-  "n_workers": 16,
-  "recent_signals": [],
-  "risk_config": {
-    "capital_total": 1000,
-    "riesgo_pct": 1.0
-  }
+  "recent_signals": []
 }
