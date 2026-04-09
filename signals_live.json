@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 06:17:32",
+  "last_update": "2026-04-09 06:28:25",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,26 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "240m",
+      "direction": "SHORT",
+      "entry_price": 2175.43,
+      "sl": 2190.0764,
+      "tp1": 2146.1372,
+      "tp2": 1727.9201,
+      "rr_tp1": 2.0,
+      "rr_tp2": 30.55,
+      "confluences": 4,
+      "confluence_detail": [
+        "📊 RSI 55.5 zona de venta",
+        "🔀 MACD cruce bajista",
+        "🧱 Order Block bajista 2136.55-2169.53",
+        "⚡ Imbalance bajista 2115.99-2226.78"
+      ],
+      "strength": "◆ MEDIA",
+      "timestamp": "2026-04-09 06:28 UTC"
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "240m",
@@ -194,29 +214,6 @@
       ],
       "strength": "◆ MEDIA",
       "timestamp": "2026-04-09 03:33 UTC"
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 2180.27,
-      "sl": 2168.6315,
-      "tp1": 2203.547,
-      "tp2": 2254.49,
-      "rr_tp1": 2.0,
-      "rr_tp2": 6.38,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 42.6 zona de compra",
-        "📈 MACD histograma creciendo",
-        "🔁 Divergencia alcista RSI",
-        "🧱 Order Block alcista 2173.07-2182.52",
-        "🌀 Fibonacci 0.786",
-        "📌 Pin Bar alcista",
-        "⚡ Imbalance alcista 2186.54-2187.08"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-09 03:26 UTC"
     }
   ]
 }
