@@ -1468,7 +1468,40 @@ def poll_telegram():
                               "text": "▶️ Bot reanudado — analizando mercados."},
                         timeout=10)
                     log.info("▶️ Bot reanudado por Telegram")
-                elif text.startswith("/capital"):
+                elif text.startswith("/ayuda") or text == "/help":
+                    requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
+                        json={"chat_id": chat_id, "text": (
+                            "📖 COMANDOS DISPONIBLES\n\n"
+                            "📊 /stats — estadísticas de la sesión\n"
+                            "📍 /posiciones — posiciones activas con P&L\n"
+                            "🔓 /abiertas — operaciones abiertas\n"
+                            "💼 /capital [cantidad] [riesgo%] — cambiar capital\n"
+                            "     Ejemplo: /capital 2000 1.5\n"
+                            "💰 /precio [par] — precio actual\n"
+                            "     Ejemplo: /precio BTCUSDT\n"
+                            "⏸️ /parar — pausar el bot\n"
+                            "▶️ /arrancar — reanudar el bot\n"
+                            "🔄 /reset — nueva sesión de estadísticas\n\n"
+                            "🎯 Botones en señales:\n"
+                            "  🎯 Apuesta → activa monitor automático\n"
+                            "  ✅ Acierto / ❌ Fallo → registrar manual\n"
+                            "  ❎ Quitar → cancelar apuesta\n\n"
+                            "📅 Resumen automático cada día a las 23:00"
+                        )}, timeout=10)
+                elif text.startswith("/precio"):
+                    parts = text.split()
+                    symbol = parts[1].upper() if len(parts) > 1 else "BTCUSDT"
+                    price = get_current_price(symbol)
+                    if price:
+                        requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
+                            json={"chat_id": chat_id,
+                                  "text": f"💰 {symbol}\n📍 Precio: ${price:,.4f}\n🕐 {spain_now()} (España)"},
+                            timeout=10)
+                    else:
+                        requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
+                            json={"chat_id": chat_id,
+                                  "text": f"❌ No se pudo obtener el precio de {symbol}.\nVerifica que el par existe en Bybit."},
+                            timeout=10)
                     # Formato: /capital 2000 o /capital 2000 1.5
                     parts = text.split()
                     try:
@@ -1906,6 +1939,53 @@ def should_send(symbol, timeframe, strength=""):
     return (datetime.now(timezone.utc) - last).total_seconds() / 60 >= CONFIG["cooldown_minutes"]
 
 # ══════════════════════════════════════════════════════
+#  🚨  ALERTAS DE MERCADO EXTREMO
+# ══════════════════════════════════════════════════════
+def monitor_market_extremes():
+    """
+    Monitoriza BTC cada 5 minutos.
+    Si sube o baja más de un 5% en 1 hora → alerta inmediata.
+    """
+    price_history = []  # [(timestamp, price)]
+    while True:
+        time.sleep(300)  # Cada 5 minutos
+        try:
+            price = get_current_price("BTCUSDT")
+            if not price:
+                continue
+
+            now = datetime.now(timezone.utc)
+            price_history.append((now, price))
+
+            # Mantener solo la última hora
+            price_history = [(t, p) for t, p in price_history
+                             if (now - t).total_seconds() <= 3600]
+
+            if len(price_history) < 3:
+                continue
+
+            oldest_price = price_history[0][1]
+            change_pct = (price - oldest_price) / oldest_price * 100
+
+            if abs(change_pct) >= 5.0:
+                direction = "📈 SUBIDA" if change_pct > 0 else "📉 BAJADA"
+                emoji = "🚀" if change_pct > 0 else "💥"
+                send_telegram(
+                    f"{emoji} MOVIMIENTO EXTREMO — BTCUSDT\n\n"
+                    f"{direction} del {change_pct:+.2f}% en 1 hora\n"
+                    f"📍 Precio actual: ${price:,.2f}\n"
+                    f"📍 Hace 1h: ${oldest_price:,.2f}\n\n"
+                    f"⚠️ Mercado volátil — opera con precaución\n"
+                    f"🕐 {spain_now()} (España)"
+                )
+                log.info(f"🚨 Alerta extremo BTC {change_pct:+.2f}%")
+                # Limpiar historial para no repetir la alerta
+                price_history = [(now, price)]
+
+        except Exception as e:
+            log.error(f"Error monitor_market_extremes: {e}")
+
+# ══════════════════════════════════════════════════════
 #  ⏰  ESPERAR CIERRE DE VELA
 # ══════════════════════════════════════════════════════
 def seconds_to_candle_close(timeframe):
@@ -2028,20 +2108,17 @@ def run():
     init_db()
 
     # Arrancar hilos de fondo
-    threading.Thread(target=monitor_positions, daemon=True, name="monitor").start()
-    threading.Thread(target=send_daily_summary, daemon=True, name="daily").start()
+    threading.Thread(target=monitor_positions,      daemon=True, name="monitor").start()
+    threading.Thread(target=send_daily_summary,     daemon=True, name="daily").start()
+    threading.Thread(target=monitor_market_extremes, daemon=True, name="extremes").start()
     log.info("🔍 Monitor de posiciones activo (cada 2min)")
     log.info("📅 Resumen diario programado a las 23:00 (España)")
+    log.info("🚨 Monitor de mercado extremo activo (cada 5min)")
     send_telegram(
         f"🤖 Marco Trading Bot v4 iniciado\n"
         f"⚡ Análisis en paralelo activo ({n_workers} hilos)\n"
         f"✅ Botones de estadísticas activos\n"
-        f"📊 /stats — ver estadísticas\n"
-        f"📍 /posiciones — ver posiciones activas\n"
-        f"⏸️ /parar — pausar el bot\n"
-        f"▶️ /arrancar — reanudar el bot\n"
-        f"💼 /capital — cambiar capital\n"
-        f"🔄 /reset — nueva sesión\n"
+        f"📖 /ayuda — ver todos los comandos\n"
         f"🛡️ Gestión de riesgo activa — {CONFIG['riesgo_pct']}% por operación"
     )
     export_to_web()
