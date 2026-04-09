@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-09 02:25:28",
+  "last_update": "2026-04-09 02:46:34",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -9,6 +9,28 @@
     "XRPUSDT"
   ],
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 71090.8,
+      "sl": 70409.8528,
+      "tp1": 72452.6944,
+      "tp2": 73814.5888,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 6,
+      "confluence_detail": [
+        "✅ Tendencia alcista EMA9>21>50",
+        "🧱 Order Block alcista 71236.20-71449.30",
+        "🛡️ Soporte clave 70666.40",
+        "🌅 Morning Star",
+        "⚡ Imbalance alcista 71174.60-71291.20",
+        "✅ Confirmado por 240m (BULL)"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-09 02:46 UTC"
+    },
     {
       "symbol": "SOLUSDT",
       "timeframe": "240m",
@@ -192,26 +214,6 @@
       ],
       "strength": "◆ MEDIA",
       "timestamp": "2026-04-08 22:04 UTC"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "240m",
-      "direction": "SHORT",
-      "entry_price": 1.3521,
-      "sl": 1.3643,
-      "tp1": 1.3277,
-      "tp2": 1.1605,
-      "rr_tp1": 2.0,
-      "rr_tp2": 15.7,
-      "confluences": 4,
-      "confluence_detail": [
-        "📊 RSI 55.3 zona de venta",
-        "🧱 Order Block bajista 1.34-1.35",
-        "🚧 Resistencia clave 1.36",
-        "⚡ Imbalance bajista 1.32-1.36"
-      ],
-      "strength": "◆ MEDIA",
-      "timestamp": "2026-04-08 21:57 UTC"
     }
   ]
 }
