@@ -42,6 +42,84 @@ last_signal_time = {}
 recent_signals_cache = []
 db_lock = threading.Lock()  # Protege SQLite en análisis paralelo
 bot_running = True          # Flag para pausar/reanudar el bot
+recent_directions = {}      # {symbol: {"direction": "LONG"/"SHORT", "time": datetime}}
+recent_directions_lock = threading.Lock()
+
+# ══════════════════════════════════════════════════════
+#  🎭  DETECCIÓN DE MANIPULACIÓN
+# ══════════════════════════════════════════════════════
+def detect_manipulation(df):
+    """
+    Detecta señales de manipulación de precio típicas en futuros:
+    - Wick extremo: mecha > 3x el cuerpo (caza de liquidez)
+    - Stop hunt: wick que rompe soporte/resistencia y vuelve rápido
+    - Spike de volumen sin continuación
+    Devuelve (bool, descripcion)
+    """
+    if len(df) < 5:
+        return False, ""
+
+    c    = df.iloc[-1]
+    prev = df.iloc[-2]
+    body = abs(c["close"] - c["open"])
+    rng  = c["high"] - c["low"]
+    upper = c["high"] - max(c["close"], c["open"])
+    lower = min(c["close"], c["open"]) - c["low"]
+
+    warnings = []
+
+    # Wick extremo — mecha > 3x el cuerpo
+    if body > 0 and rng > 0:
+        if upper > body * 3 and upper > rng * 0.6:
+            warnings.append("mecha superior extrema (posible trampa alcista)")
+        if lower > body * 3 and lower > rng * 0.6:
+            warnings.append("mecha inferior extrema (posible trampa bajista)")
+
+    # Vela tipo doji con volumen muy alto — indecision manipulada
+    vol    = c.get("volume", 0)
+    vol_ma = df["volume"].tail(20).mean()
+    if body < rng * 0.1 and vol > vol_ma * 2.5:
+        warnings.append("doji con volumen extremo (posible manipulacion)")
+
+    # Spike que rompe y regresa — comparar con velas previas
+    prev_high = df["high"].tail(10).iloc[:-1].max()
+    prev_low  = df["low"].tail(10).iloc[:-1].min()
+    if c["high"] > prev_high * 1.003 and c["close"] < prev_high:
+        warnings.append("spike sobre resistencia sin cierre (stop hunt)")
+    if c["low"] < prev_low * 0.997 and c["close"] > prev_low:
+        warnings.append("spike bajo soporte sin cierre (stop hunt)")
+
+    if warnings:
+        return True, " / ".join(warnings)
+    return False, ""
+
+# ══════════════════════════════════════════════════════
+#  🔗  CORRELACIÓN ENTRE PARES
+# ══════════════════════════════════════════════════════
+def get_correlation_confluence(symbol, direction):
+    """
+    Comprueba si otros pares han dado señal en la misma dirección
+    en los últimos 30 minutos. Cada coincidencia suma una confluencia.
+    """
+    from datetime import timedelta
+    now = datetime.now(timezone.utc)
+    confluences = []
+    with recent_directions_lock:
+        for sym, data in recent_directions.items():
+            if sym == symbol:
+                continue
+            age = (now - data["time"]).total_seconds() / 60
+            if age <= 30 and data["direction"] == direction:
+                confluences.append(f"🔗 Correlacion con {sym} ({direction})")
+    return confluences
+
+def register_signal_direction(symbol, direction):
+    """Guarda la direccion de la ultima senal de un par"""
+    with recent_directions_lock:
+        recent_directions[symbol] = {
+            "direction": direction,
+            "time": datetime.now(timezone.utc)
+        }
 
 # ══════════════════════════════════════════════════════
 #  🗄️  BASE DE DATOS
@@ -722,6 +800,9 @@ def analyze(df, symbol, timeframe):
     fg      = fetch_fear_greed() if symbol == "BTCUSDT" else None  # 😱 solo BTC
     deribit = fetch_deribit_options(symbol) if symbol in ("BTCUSDT","ETHUSDT") else None
 
+    # 🎭 Detección de manipulación
+    manipulation, manip_desc = detect_manipulation(df)
+
     vol_spike  = bool(vol20 and vol > vol20 * 1.8)
     vol_climax = bool(vol20 and vol > vol20 * 3.0)
 
@@ -837,6 +918,12 @@ def analyze(df, symbol, timeframe):
         log.info(f"  📈 LONG {len(long_c)} | 📉 SHORT {len(short_c)} — sin señal (min {min_conf} para {timeframe}m)")
         return None
 
+    # 🔗 Correlación entre pares — añadir confluencias extra
+    corr = get_correlation_confluence(symbol, direction)
+    confluences.extend(corr)
+    if corr:
+        log.info(f"🔗 Correlacion detectada: {corr}")
+
     if timeframe in ("15", "60"):
         if direction == "LONG" and htf_bear:
             log.info(f"  🚫 LONG bloqueado — tendencia bajista en HTF")
@@ -894,6 +981,8 @@ def analyze(df, symbol, timeframe):
         "poc":               vp.get("poc"), "vah": vp.get("vah"), "val": vp.get("val"),
         "funding":           funding,
         "fear_greed":        fg,
+        "manipulation":      manipulation,
+        "manip_desc":        manip_desc,
         "stats":             get_stats(symbol),
         "rsi":               round(rsi, 1),
     }
@@ -969,6 +1058,9 @@ def build_message(sig):
     fg = sig.get("fear_greed")
     fg_line = f"\n😱 Fear & Greed: {fg['value']} — {fg['label']}" if fg else ""
 
+    manip = sig.get("manipulation", False)
+    manip_line = f"\n\n⚠️ POSIBLE TRAMPA: {sig.get('manip_desc','')}\n   Opera con precaución extra." if manip else ""
+
     return f"""🚨 SEÑAL — {sig["symbol"]} {sig["timeframe"]}
 ⏰ {sig["timestamp"]}
 
@@ -992,7 +1084,7 @@ def build_message(sig):
 {vp_or_default}
 {hist}
 
-💪 Fuerza: {sig["strength"]}{fg_line}
+💪 Fuerza: {sig["strength"]}{fg_line}{manip_line}
 
 ━━━━━━━━━━━━━━━━━━━━
 🛡️ GESTIÓN DE RIESGO
@@ -2066,6 +2158,7 @@ def process_pair(symbol, tf):
                     send_telegram(msg)
                 export_to_web(signal)
                 last_signal_time[f"{symbol}_{tf}"] = datetime.now(timezone.utc)
+                register_signal_direction(symbol, signal["direction"])
             else:
                 log.info(f"⏸️ Cooldown activo {symbol} {tf}m")
         else:
