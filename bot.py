@@ -1995,8 +1995,10 @@ def export_to_web(new_signal=None):
                  "tp1": v["tp1"], "tp2": v["tp2"]}
                 for v in active_positions.values()
             ]
+        from datetime import timedelta
+        spain_now_dt = datetime.now(timezone.utc) + timedelta(hours=CONFIG.get("utc_offset", 2))
         data = {
-            "last_update":     datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
+            "last_update":     spain_now_dt.strftime("%Y-%m-%d %H:%M:%S (España)"),
             "bot_status":      "ACTIVO" if bot_running else "PAUSADO",
             "signals_today":   len(recent_signals_cache),
             "pairs_monitored": CONFIG["symbols"],
