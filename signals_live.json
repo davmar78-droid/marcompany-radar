@@ -1,12 +1,19 @@
 {
-  "last_update": "2026-04-10 19:16:15",
+  "last_update": "2026-04-10 21:24:59 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 0,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
     "SOLUSDT",
-    "XRPUSDT"
+    "XRPUSDT",
+    "BNBUSDT"
   ],
-  "recent_signals": []
+  "n_workers": 20,
+  "recent_signals": [],
+  "active_positions": [],
+  "risk_config": {
+    "capital_total": 1000,
+    "riesgo_pct": 1.0
+  }
 }
