@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-11 01:08:35 (España)",
+  "last_update": "2026-04-11 03:49:58 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 1,
   "pairs_monitored": [
@@ -12,32 +12,34 @@
   "n_workers": 20,
   "recent_signals": [
     {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
+      "symbol": "SOLUSDT",
+      "timeframe": "15m",
       "direction": "LONG",
-      "entry_price": 72838.9,
-      "sl": 72611.8602,
-      "tp1": 73292.9796,
-      "tp2": 73747.0592,
+      "entry_price": 84.58,
+      "sl": 84.292,
+      "tp1": 85.156,
+      "tp2": 85.732,
       "rr_tp1": 2.0,
       "rr_tp2": 4.0,
-      "confluences": 6,
+      "confluences": 8,
       "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 72848.70-73146.40",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 72839.10-72878.60",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 240m (BULL)"
+        "📊 RSI 44.0 zona de compra",
+        "🔁 Divergencia alcista RSI",
+        "🔁 Divergencia alcista MACD",
+        "🧱 Order Block alcista 84.65-85.01",
+        "🛡️ Soporte clave 84.41",
+        "🌅 Morning Star",
+        "⚡ Imbalance alcista 84.68-84.79",
+        "✅ Confirmado por 60m (BULL)"
       ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 01:08 (España)",
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-11 03:49 (España)",
       "risk": {
-        "leverage": 5,
+        "leverage": 10,
         "max_loss_usdt": 10.0,
         "riesgo_pct": 1.0,
-        "position_size_usdt": 3208.2,
-        "capital_necesario": 641.64
+        "position_size_usdt": 2936.81,
+        "capital_necesario": 293.68
       }
     }
   ],
