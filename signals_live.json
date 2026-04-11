@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 15:08:55 (España)",
+  "last_update": "2026-04-11 15:16:48 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 1,
+  "signals_today": 0,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -10,37 +10,7 @@
     "BNBUSDT"
   ],
   "n_workers": 20,
-  "recent_signals": [
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 72738.9,
-      "sl": 72451.1726,
-      "tp1": 73314.3548,
-      "tp2": 73889.8096,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 6,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 72601.00-72767.90",
-        "🛡️ Soporte clave 72571.40",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 15:08 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2528.05,
-        "capital_necesario": 505.61
-      }
-    }
-  ],
+  "recent_signals": [],
   "active_positions": [],
   "risk_config": {
     "capital_total": 1000,
