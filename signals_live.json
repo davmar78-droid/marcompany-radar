@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 06:05:40 (España)",
+  "last_update": "2026-04-11 06:05:51 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 2,
+  "signals_today": 3,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -11,6 +11,36 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 72855.4,
+      "sl": 72647.7313,
+      "tp1": 73270.7374,
+      "tp2": 73686.0748,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 7,
+      "confluence_detail": [
+        "✅ Tendencia alcista EMA9>21>50",
+        "🧱 Order Block alcista 72848.70-73146.40",
+        "🛡️ Soporte clave 72623.90",
+        "🔧 Tweezer Bottom",
+        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
+        "🔗 Correlacion con XRPUSDT (LONG)",
+        "✅ Confirmado por 240m (BULL)"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-11 06:05 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3508.25,
+        "capital_necesario": 350.82
+      }
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "60m",
