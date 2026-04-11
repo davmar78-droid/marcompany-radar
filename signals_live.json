@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 03:49:58 (España)",
+  "last_update": "2026-04-11 06:05:40 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 1,
+  "signals_today": 2,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -11,6 +11,35 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 1.3502,
+      "sl": 1.3456,
+      "tp1": 1.3594,
+      "tp2": 1.3872,
+      "rr_tp1": 2.0,
+      "rr_tp2": 8.04,
+      "confluences": 6,
+      "confluence_detail": [
+        "✅ Tendencia alcista EMA9>21>50",
+        "🧱 Order Block alcista 1.35-1.35",
+        "🛡️ Soporte clave 1.34",
+        "🔧 Tweezer Bottom",
+        "⚡ Imbalance alcista 1.35-1.35",
+        "✅ Confirmado por 240m (BULL)"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-11 06:05 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2935.22,
+        "capital_necesario": 587.04
+      }
+    },
     {
       "symbol": "SOLUSDT",
       "timeframe": "15m",
@@ -43,7 +72,16 @@
       }
     }
   ],
-  "active_positions": [],
+  "active_positions": [
+    {
+      "symbol": "BTCUSDT",
+      "direction": "LONG",
+      "entry_price": 72838.9,
+      "sl": 72611.8602,
+      "tp1": 73292.9796,
+      "tp2": 73747.0592
+    }
+  ],
   "risk_config": {
     "capital_total": 1000,
     "riesgo_pct": 1.0
