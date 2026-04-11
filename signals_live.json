@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 15:08:33 (España)",
+  "last_update": "2026-04-11 15:08:55 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 9,
+  "signals_today": 1,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -15,10 +15,10 @@
       "symbol": "BTCUSDT",
       "timeframe": "60m",
       "direction": "LONG",
-      "entry_price": 72739.5,
+      "entry_price": 72738.9,
       "sl": 72451.1726,
-      "tp1": 73316.1548,
-      "tp2": 73892.8096,
+      "tp1": 73314.3548,
+      "tp2": 73889.8096,
       "rr_tp1": 2.0,
       "rr_tp2": 4.0,
       "confluences": 6,
@@ -36,248 +36,8 @@
         "leverage": 5,
         "max_loss_usdt": 10.0,
         "riesgo_pct": 1.0,
-        "position_size_usdt": 2522.81,
-        "capital_necesario": 504.56
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 72841.9,
-      "sl": 72691.0869,
-      "tp1": 73143.5262,
-      "tp2": 73445.1524,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 7,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 72848.70-73146.40",
-        "🛡️ Soporte clave 72623.90",
-        "🔧 Tweezer Bottom",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "🔗 Correlacion con SOLUSDT (LONG)",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 13:08 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 4829.95,
-        "capital_necesario": 483.0
-      }
-    },
-    {
-      "symbol": "SOLUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 84.05,
-      "sl": 83.8392,
-      "tp1": 84.4716,
-      "tp2": 85.66,
-      "rr_tp1": 2.0,
-      "rr_tp2": 7.64,
-      "confluences": 6,
-      "confluence_detail": [
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 84.09-84.38",
-        "🛡️ Soporte clave 83.84",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 84.06-84.07",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 13:07 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3987.19,
-        "capital_necesario": 797.44
-      }
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 2232.17,
-      "sl": 2226.5465,
-      "tp1": 2243.417,
-      "tp2": 2254.664,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 8,
-      "confluence_detail": [
-        "📊 RSI 42.9 zona de compra",
-        "📈 MACD histograma creciendo",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 2235.53-2240.37",
-        "🛡️ Soporte clave 2226.97",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 2231.91-2232.45",
-        "✅ Confirmado por 60m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 11:07 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3969.36,
-        "capital_necesario": 396.94
-      }
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 1.3456,
-      "sl": 1.3399,
-      "tp1": 1.357,
-      "tp2": 1.3872,
-      "rr_tp1": 2.0,
-      "rr_tp2": 7.3,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 44.2 zona de compra",
-        "🧱 Order Block alcista 1.35-1.35",
-        "🛡️ Soporte clave 1.34",
-        "📌 Pin Bar alcista",
-        "⚡ Imbalance alcista 1.35-1.35",
-        "🔗 Correlacion con BTCUSDT (LONG)",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 09:07 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2360.7,
-        "capital_necesario": 236.07
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 72696.1,
-      "sl": 72509.9289,
-      "tp1": 73068.4422,
-      "tp2": 73440.7844,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 8,
-      "confluence_detail": [
-        "📊 RSI 42.8 zona de compra",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 72872.40-72952.50",
-        "🛡️ Soporte clave 72320.30",
-        "🌅 Morning Star",
-        "⚡ Imbalance alcista 72685.00-72758.40",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 60m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 08:37 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3904.8,
-        "capital_necesario": 390.48
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 72644.9,
-      "sl": 72383.6152,
-      "tp1": 73167.4696,
-      "tp2": 73690.0392,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 8,
-      "confluence_detail": [
-        "📊 RSI 38.6 zona de compra",
-        "🔁 Divergencia alcista RSI",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 72728.40-72810.80",
-        "🛡️ Soporte clave 72320.30",
-        "⚡ Imbalance alcista 72685.00-72758.40",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 60m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 08:08 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2780.3,
-        "capital_necesario": 278.03
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 72913.2,
-      "sl": 72645.8956,
-      "tp1": 73447.8088,
-      "tp2": 73982.4176,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 6,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 72848.70-73146.40",
-        "🛡️ Soporte clave 72623.90",
-        "🔧 Tweezer Bottom",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 06:08 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2727.72,
-        "capital_necesario": 545.54
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 72838.9,
-      "sl": 72611.8602,
-      "tp1": 73292.9796,
-      "tp2": 73747.0592,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 6,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🧱 Order Block alcista 72848.70-73146.40",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 72839.10-72878.60",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 01:08 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3208.2,
-        "capital_necesario": 641.64
+        "position_size_usdt": 2528.05,
+        "capital_necesario": 505.61
       }
     }
   ],
