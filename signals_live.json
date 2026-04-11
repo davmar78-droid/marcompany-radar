@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-11 18:02:52 (España)",
+  "last_update": "2026-04-11 18:04:08 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 1,
   "pairs_monitored": [
@@ -15,10 +15,10 @@
       "symbol": "BTCUSDT",
       "timeframe": "60m",
       "direction": "LONG",
-      "entry_price": 72805.2,
+      "entry_price": 72800.8,
       "sl": 72481.845,
-      "tp1": 73451.91,
-      "tp2": 74098.62,
+      "tp1": 73438.71,
+      "tp2": 74076.62,
       "rr_tp1": 2.0,
       "rr_tp2": 4.0,
       "confluences": 6,
@@ -31,13 +31,13 @@
         "✅ Confirmado por 240m (BULL)"
       ],
       "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 18:02 (España)",
+      "timestamp": "2026-04-11 18:04 (España)",
       "risk": {
         "leverage": 5,
         "max_loss_usdt": 10.0,
         "riesgo_pct": 1.0,
-        "position_size_usdt": 2251.56,
-        "capital_necesario": 450.31
+        "position_size_usdt": 2282.48,
+        "capital_necesario": 456.5
       }
     }
   ],
