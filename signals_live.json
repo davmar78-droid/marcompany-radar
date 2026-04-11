@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 17:05:57 (España)",
+  "last_update": "2026-04-11 17:47:43 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 4,
+  "signals_today": 0,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -10,145 +10,8 @@
     "BNBUSDT"
   ],
   "n_workers": 20,
-  "recent_signals": [
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 1.3422,
-      "sl": 1.3366,
-      "tp1": 1.3534,
-      "tp2": 1.387,
-      "rr_tp1": 2.0,
-      "rr_tp2": 8.0,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 40.9 zona de compra",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 1.34-1.35",
-        "🛡️ Soporte clave 1.34",
-        "🔧 Tweezer Bottom",
-        "🔗 Correlacion con ETHUSDT (LONG)",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 17:05 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2396.79,
-        "capital_necesario": 239.68
-      }
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 2241.55,
-      "sl": 2230.6589,
-      "tp1": 2263.3322,
-      "tp2": 2285.1144,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 6,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 2236.44-2244.70",
-        "🛡️ Soporte clave 2233.44",
-        "🌅 Morning Star",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-11 17:05 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2058.15,
-        "capital_necesario": 411.63
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 72632.3,
-      "sl": 72451.0809,
-      "tp1": 72994.7382,
-      "tp2": 73357.1764,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 7,
-      "confluence_detail": [
-        "✅ Tendencia alcista EMA9>21>50",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 72601.00-72767.90",
-        "⚡ Imbalance alcista 72670.00-72761.20",
-        "😱 Fear & Greed: 15 (Extreme Fear) — miedo extremo",
-        "🔗 Correlacion con XRPUSDT (LONG)",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 16:04 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 4007.98,
-        "capital_necesario": 400.8
-      }
-    },
-    {
-      "symbol": "XRPUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 1.3444,
-      "sl": 1.3414,
-      "tp1": 1.3504,
-      "tp2": 1.387,
-      "rr_tp1": 2.0,
-      "rr_tp2": 14.2,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 43.7 zona de compra",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 1.34-1.35",
-        "🛡️ Soporte clave 1.34",
-        "🌅 Morning Star",
-        "⚡ Imbalance alcista 1.35-1.35",
-        "✅ Confirmado por 240m (BULL)"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-11 16:04 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 4481.33,
-        "capital_necesario": 448.13
-      }
-    }
-  ],
-  "active_positions": [
-    {
-      "symbol": "BTCUSDT",
-      "direction": "LONG",
-      "entry_price": 72632.3,
-      "sl": 72451.0809,
-      "tp1": 72994.7382,
-      "tp2": 73357.1764
-    },
-    {
-      "symbol": "BTCUSDT",
-      "direction": "LONG",
-      "entry_price": 72620.6,
-      "sl": 72422.5074,
-      "tp1": 73016.7852,
-      "tp2": 73412.9704
-    }
-  ],
+  "recent_signals": [],
+  "active_positions": [],
   "risk_config": {
     "capital_total": 1000,
     "riesgo_pct": 1.0
