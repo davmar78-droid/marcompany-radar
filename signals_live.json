@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 13:05:36 (España)",
+  "last_update": "2026-04-11 13:05:47 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 7,
+  "signals_today": 8,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -11,6 +11,36 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "60m",
+      "direction": "LONG",
+      "entry_price": 84.05,
+      "sl": 83.8392,
+      "tp1": 84.4716,
+      "tp2": 85.66,
+      "rr_tp1": 2.0,
+      "rr_tp2": 7.64,
+      "confluences": 7,
+      "confluence_detail": [
+        "🔁 Divergencia alcista MACD",
+        "🧱 Order Block alcista 84.09-84.38",
+        "🛡️ Soporte clave 83.84",
+        "🔧 Tweezer Bottom",
+        "⚡ Imbalance alcista 84.06-84.07",
+        "🔗 Correlacion con BTCUSDT (LONG)",
+        "✅ Confirmado por 240m (BULL)"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-11 13:05 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3987.19,
+        "capital_necesario": 398.72
+      }
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "60m",
