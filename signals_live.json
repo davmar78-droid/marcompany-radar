@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 13:19:08 (España)",
+  "last_update": "2026-04-12 13:49:47 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,34 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 1.3323,
+      "sl": 1.3276,
+      "tp1": 1.3417,
+      "tp2": 1.3695,
+      "rr_tp1": 2.0,
+      "rr_tp2": 7.91,
+      "confluences": 5,
+      "confluence_detail": [
+        "🧱 Order Block alcista 1.32-1.33",
+        "🛡️ Soporte clave 1.33",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 1.33-1.35",
+        "🎯 Precio en VAL 1.33"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 13:49 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2834.68,
+        "capital_necesario": 566.94
+      }
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
@@ -282,37 +310,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 2964.8,
         "capital_necesario": 296.48
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71564.0,
-      "sl": 71317.6497,
-      "tp1": 72056.7006,
-      "tp2": 72869.4,
-      "rr_tp1": 2.0,
-      "rr_tp2": 5.3,
-      "confluences": 8,
-      "confluence_detail": [
-        "📊 RSI 37.1 zona de compra",
-        "🧱 Order Block alcista 71593.20-71670.00",
-        "🛡️ Soporte clave 71380.10",
-        "🌀 Fibonacci 0.786",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 71588.60-71640.10",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 11:19 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2904.97,
-        "capital_necesario": 290.5
       }
     }
   ],
