@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-11 22:43:23 (España)",
+  "last_update": "2026-04-12 02:05:50 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 0,
+  "signals_today": 1,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -10,7 +10,36 @@
     "BNBUSDT"
   ],
   "n_workers": 20,
-  "recent_signals": [],
+  "recent_signals": [
+    {
+      "symbol": "SOLUSDT",
+      "timeframe": "Dm",
+      "direction": "LONG",
+      "entry_price": 84.84,
+      "sl": 83.0362,
+      "tp1": 88.4476,
+      "tp2": 92.11,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.03,
+      "confluences": 5,
+      "confluence_detail": [
+        "📈 MACD histograma creciendo",
+        "🧱 Order Block alcista 85.07-89.15",
+        "🌀 Fibonacci 0.786",
+        "📌 Pin Bar alcista",
+        "⚡ Imbalance alcista 84.23-85.38"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 02:05 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 470.34,
+        "capital_necesario": 94.07
+      }
+    }
+  ],
   "active_positions": [],
   "risk_config": {
     "capital_total": 1000,
