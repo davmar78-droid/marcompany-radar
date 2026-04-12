@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 10:35:00 (España)",
+  "last_update": "2026-04-12 10:35:17 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,36 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 71655.3,
+      "sl": 71508.3975,
+      "tp1": 71949.105,
+      "tp2": 73104.0,
+      "rr_tp1": 2.0,
+      "rr_tp2": 9.86,
+      "confluences": 7,
+      "confluence_detail": [
+        "📊 RSI 40.5 zona de compra",
+        "🧱 Order Block alcista 71574.40-71688.00",
+        "🛡️ Soporte clave 71380.10",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 71687.00-72953.00",
+        "🎯 Precio en VAL 71447.20",
+        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-12 10:35 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 4877.75,
+        "capital_necesario": 487.78
+      }
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -281,39 +311,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 2031.56,
         "capital_necesario": 203.16
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71627.8,
-      "sl": 71297.4685,
-      "tp1": 72288.463,
-      "tp2": 72949.126,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 10,
-      "confluence_detail": [
-        "📉 RSI 34.9 sobrevendido",
-        "📈 MACD histograma creciendo",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 71574.40-71688.00",
-        "🛡️ Soporte clave 71380.10",
-        "🌀 Fibonacci 0.786",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 71687.00-72953.00",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 08:49 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2168.36,
-        "capital_necesario": 216.84
       }
     }
   ],
