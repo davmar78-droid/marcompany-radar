@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 12:19:17 (España)",
+  "last_update": "2026-04-12 12:34:51 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,35 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 2212.6,
+      "sl": 2221.8291,
+      "tp1": 2194.1418,
+      "tp2": 2128.9803,
+      "rr_tp1": 2.0,
+      "rr_tp2": 9.06,
+      "confluences": 6,
+      "confluence_detail": [
+        "✅ Tendencia bajista EMA9<21<50",
+        "🔁 Divergencia bajista MACD",
+        "🧱 Order Block bajista 2210.00-2213.00",
+        "🚧 Resistencia clave 2219.49",
+        "🌆 Evening Star",
+        "📊 Deribit puts/calls: 0.61 — presión bajista"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 12:34 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2397.42,
+        "capital_necesario": 479.48
+      }
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
@@ -282,34 +311,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 4877.75,
         "capital_necesario": 487.78
-      }
-    },
-    {
-      "symbol": "ETHUSDT",
-      "timeframe": "15m",
-      "direction": "SHORT",
-      "entry_price": 2216.54,
-      "sl": 2222.7874,
-      "tp1": 2204.0452,
-      "tp2": 2128.9803,
-      "rr_tp1": 2.0,
-      "rr_tp2": 14.02,
-      "confluences": 5,
-      "confluence_detail": [
-        "✅ Tendencia bajista EMA9<21<50",
-        "🧱 Order Block bajista 2213.30-2215.94",
-        "🔧 Tweezer Top",
-        "⚡ Imbalance bajista 2214.33-2216.66",
-        "📊 Deribit puts/calls: 0.56 — presión bajista"
-      ],
-      "strength": "⚡ ALTA",
-      "timestamp": "2026-04-12 10:34 (España)",
-      "risk": {
-        "leverage": 5,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3547.94,
-        "capital_necesario": 709.59
       }
     }
   ],
