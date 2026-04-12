@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-04-12 21:15:36 (España)",
+  "last_update": "2026-04-12 21:15:47 (España)",
   "bot_status": "ACTIVO",
-  "signals_today": 9,
+  "signals_today": 10,
   "pairs_monitored": [
     "BTCUSDT",
     "ETHUSDT",
@@ -11,6 +11,35 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "SHORT",
+      "entry_price": 2201.99,
+      "sl": 2209.0875,
+      "tp1": 2187.795,
+      "tp2": 2077.447,
+      "rr_tp1": 2.0,
+      "rr_tp2": 17.55,
+      "confluences": 6,
+      "confluence_detail": [
+        "📊 RSI 58.2 zona de venta",
+        "🔁 Divergencia bajista MACD",
+        "🧱 Order Block bajista 2200.01-2206.05",
+        "🚧 Resistencia clave 2206.49",
+        "⚡ Imbalance bajista 2196.74-2200.01",
+        "📊 Deribit puts/calls: 0.69 — presión bajista"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 21:15 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3102.49,
+        "capital_necesario": 620.5
+      }
+    },
     {
       "symbol": "XRPUSDT",
       "timeframe": "15m",
