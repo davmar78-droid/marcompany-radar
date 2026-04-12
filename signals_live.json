@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 11:19:37 (España)",
+  "last_update": "2026-04-12 11:35:28 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,37 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 71583.7,
+      "sl": 71342.2549,
+      "tp1": 72066.5902,
+      "tp2": 72880.0,
+      "rr_tp1": 2.0,
+      "rr_tp2": 5.37,
+      "confluences": 8,
+      "confluence_detail": [
+        "📊 RSI 38.8 zona de compra",
+        "🧱 Order Block alcista 71593.20-71670.00",
+        "🛡️ Soporte clave 71380.10",
+        "🌀 Fibonacci 0.786",
+        "🌅 Morning Star",
+        "⚡ Imbalance alcista 71588.60-71640.10",
+        "🎯 Precio en VAL 71447.20",
+        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-12 11:35 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2964.8,
+        "capital_necesario": 296.48
+      }
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "15m",
@@ -277,36 +308,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 1696.1,
         "capital_necesario": 339.22
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71658.0,
-      "sl": 71500.5364,
-      "tp1": 71972.9272,
-      "tp2": 73104.0,
-      "rr_tp1": 2.0,
-      "rr_tp2": 9.18,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 39.2 zona de compra",
-        "🧱 Order Block alcista 71574.40-71688.00",
-        "🛡️ Soporte clave 71380.10",
-        "🌀 Fibonacci 0.786",
-        "⚡ Imbalance alcista 71687.00-72953.00",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 09:50 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 4550.77,
-        "capital_necesario": 455.08
       }
     }
   ],
