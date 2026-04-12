@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 16:05:39 (España)",
+  "last_update": "2026-04-12 16:49:35 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,36 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 2179.52,
+      "sl": 2173.4256,
+      "tp1": 2191.7088,
+      "tp2": 2257.08,
+      "rr_tp1": 2.0,
+      "rr_tp2": 12.73,
+      "confluences": 7,
+      "confluence_detail": [
+        "📉 RSI 26.7 sobrevendido",
+        "🔁 Divergencia alcista RSI",
+        "🔁 Divergencia alcista MACD",
+        "🧱 Order Block alcista 2185.26-2197.91",
+        "🌀 Fibonacci 1.0",
+        "⚡ Imbalance alcista 2183.77-2187.49",
+        "🎯 Precio en VAL 2177.71"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-12 16:49 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3576.27,
+        "capital_necesario": 357.63
+      }
+    },
     {
       "symbol": "BTCUSDT",
       "timeframe": "60m",
@@ -271,36 +301,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 3334.28,
         "capital_necesario": 333.43
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "60m",
-      "direction": "LONG",
-      "entry_price": 71429.7,
-      "sl": 71230.3127,
-      "tp1": 71828.4746,
-      "tp2": 72957.5,
-      "rr_tp1": 2.0,
-      "rr_tp2": 7.66,
-      "confluences": 7,
-      "confluence_detail": [
-        "📉 RSI 33.0 sobrevendido",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 71401.70-71650.00",
-        "🛡️ Soporte clave 71267.80",
-        "🌀 Fibonacci 0.618",
-        "⚡ Imbalance alcista 71469.90-71471.40",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 13:05 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3582.46,
-        "capital_necesario": 358.25
       }
     }
   ],
