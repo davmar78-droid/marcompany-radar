@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 14:19:54 (España)",
+  "last_update": "2026-04-12 14:50:10 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,34 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BNBUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 594.5,
+      "sl": 593.282,
+      "tp1": 596.936,
+      "tp2": 608.7,
+      "rr_tp1": 2.0,
+      "rr_tp2": 11.66,
+      "confluences": 5,
+      "confluence_detail": [
+        "🧱 Order Block alcista 593.80-594.80",
+        "🛡️ Soporte clave 592.60",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 594.30-595.00",
+        "🎯 Precio en VAL 593.88"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 14:50 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 4880.95,
+        "capital_necesario": 976.19
+      }
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -278,36 +306,6 @@
         "position_size_usdt": 3476.95,
         "capital_necesario": 347.7
       }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71496.8,
-      "sl": 71256.4071,
-      "tp1": 71977.5858,
-      "tp2": 72869.4,
-      "rr_tp1": 2.0,
-      "rr_tp2": 5.71,
-      "confluences": 7,
-      "confluence_detail": [
-        "📉 RSI 33.8 sobrevendido",
-        "🧱 Order Block alcista 71593.20-71670.00",
-        "🛡️ Soporte clave 71267.80",
-        "🌀 Fibonacci 1.0",
-        "⚡ Imbalance alcista 71588.60-71640.10",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 11:49 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2974.16,
-        "capital_necesario": 297.42
-      }
     }
   ],
   "active_positions": [
@@ -334,6 +332,14 @@
       "sl": 71160.5347,
       "tp1": 72239.5306,
       "tp2": 72958.8612
+    },
+    {
+      "symbol": "XRPUSDT",
+      "direction": "LONG",
+      "entry_price": 1.3323,
+      "sl": 1.3276,
+      "tp1": 1.3417,
+      "tp2": 1.3695
     }
   ],
   "risk_config": {
