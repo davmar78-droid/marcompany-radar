@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 16:49:35 (España)",
+  "last_update": "2026-04-12 17:19:54 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,34 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "XRPUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 1.3228,
+      "sl": 1.3187,
+      "tp1": 1.331,
+      "tp2": 1.3555,
+      "rr_tp1": 2.0,
+      "rr_tp2": 7.98,
+      "confluences": 5,
+      "confluence_detail": [
+        "📊 RSI 39.4 zona de compra",
+        "🔁 Divergencia alcista MACD",
+        "🧱 Order Block alcista 1.33-1.33",
+        "🌀 Fibonacci 1.0",
+        "⚡ Imbalance alcista 1.32-1.33"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 17:19 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3226.34,
+        "capital_necesario": 645.27
+      }
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -271,36 +299,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 2834.68,
         "capital_necesario": 566.94
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71464.9,
-      "sl": 71250.566,
-      "tp1": 71893.568,
-      "tp2": 72734.5,
-      "rr_tp1": 2.0,
-      "rr_tp2": 5.92,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 37.5 zona de compra",
-        "🧱 Order Block alcista 71471.40-71551.70",
-        "🛡️ Soporte clave 71267.80",
-        "🌀 Fibonacci 1.0",
-        "⚡ Imbalance alcista 71492.10-71571.40",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 13:19 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3334.28,
-        "capital_necesario": 333.43
       }
     }
   ],
