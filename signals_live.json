@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 08:34:40 (España)",
+  "last_update": "2026-04-12 08:34:54 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,39 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BTCUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 71618.3,
+      "sl": 71292.4507,
+      "tp1": 72269.9986,
+      "tp2": 72921.6972,
+      "rr_tp1": 2.0,
+      "rr_tp2": 4.0,
+      "confluences": 10,
+      "confluence_detail": [
+        "📉 RSI 34.5 sobrevendido",
+        "📈 MACD histograma creciendo",
+        "🔁 Divergencia alcista RSI",
+        "🔁 Divergencia alcista MACD",
+        "🧱 Order Block alcista 71574.40-71688.00",
+        "🛡️ Soporte clave 71380.10",
+        "🌀 Fibonacci 0.786",
+        "⚡ Imbalance alcista 71687.00-72953.00",
+        "🎯 Precio en VAL 71447.20",
+        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-12 08:34 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2197.9,
+        "capital_necesario": 219.79
+      }
+    },
     {
       "symbol": "ETHUSDT",
       "timeframe": "15m",
@@ -285,38 +318,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 2292.73,
         "capital_necesario": 229.27
-      }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71520.2,
-      "sl": 71160.5347,
-      "tp1": 72239.5306,
-      "tp2": 72958.8612,
-      "rr_tp1": 2.0,
-      "rr_tp2": 4.0,
-      "confluences": 9,
-      "confluence_detail": [
-        "📉 RSI 23.3 sobrevendido",
-        "🔁 Divergencia alcista RSI",
-        "🔁 Divergencia alcista MACD",
-        "🧱 Order Block alcista 71641.40-71926.00",
-        "🛡️ Soporte clave 71267.80",
-        "🌀 Fibonacci 1.0",
-        "🔨 Hammer",
-        "⚡ Imbalance alcista 71687.00-72953.00",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 06:49 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 1988.52,
-        "capital_necesario": 198.85
       }
     }
   ],
