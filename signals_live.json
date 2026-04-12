@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 18:49:28 (España)",
+  "last_update": "2026-04-12 19:19:30 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,35 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "ETHUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 2188.9,
+      "sl": 2182.1695,
+      "tp1": 2202.361,
+      "tp2": 2287.54,
+      "rr_tp1": 2.0,
+      "rr_tp2": 14.66,
+      "confluences": 6,
+      "confluence_detail": [
+        "📈 MACD histograma creciendo",
+        "🧱 Order Block alcista 2185.26-2197.91",
+        "🛡️ Soporte clave 2177.00",
+        "🕯️ Engulfing alcista",
+        "⚡ Imbalance alcista 2189.82-2190.68",
+        "🎯 Precio en VAL 2180.96"
+      ],
+      "strength": "⚡ ALTA",
+      "timestamp": "2026-04-12 19:19 (España)",
+      "risk": {
+        "leverage": 5,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 3252.21,
+        "capital_necesario": 650.44
+      }
+    },
     {
       "symbol": "SOLUSDT",
       "timeframe": "15m",
@@ -270,36 +299,6 @@
         "riesgo_pct": 1.0,
         "position_size_usdt": 1505.54,
         "capital_necesario": 301.11
-      }
-    },
-    {
-      "symbol": "BNBUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 592.4,
-      "sl": 589.8568,
-      "tp1": 597.4864,
-      "tp2": 607.1,
-      "rr_tp1": 2.0,
-      "rr_tp2": 5.78,
-      "confluences": 7,
-      "confluence_detail": [
-        "📊 RSI 37.3 zona de compra",
-        "🧱 Order Block alcista 592.50-594.00",
-        "🛡️ Soporte clave 589.90",
-        "📌 Pin Bar alcista",
-        "⚡ Imbalance alcista 592.60-593.60",
-        "🔥 Volumen climático",
-        "🎯 Precio en VAL 593.88"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 15:05 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 2329.35,
-        "capital_necesario": 232.94
       }
     }
   ],
