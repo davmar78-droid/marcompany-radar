@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-04-12 14:50:10 (España)",
+  "last_update": "2026-04-12 15:05:47 (España)",
   "bot_status": "ACTIVO",
   "signals_today": 10,
   "pairs_monitored": [
@@ -11,6 +11,36 @@
   ],
   "n_workers": 20,
   "recent_signals": [
+    {
+      "symbol": "BNBUSDT",
+      "timeframe": "15m",
+      "direction": "LONG",
+      "entry_price": 592.4,
+      "sl": 589.8568,
+      "tp1": 597.4864,
+      "tp2": 607.1,
+      "rr_tp1": 2.0,
+      "rr_tp2": 5.78,
+      "confluences": 7,
+      "confluence_detail": [
+        "📊 RSI 37.3 zona de compra",
+        "🧱 Order Block alcista 592.50-594.00",
+        "🛡️ Soporte clave 589.90",
+        "📌 Pin Bar alcista",
+        "⚡ Imbalance alcista 592.60-593.60",
+        "🔥 Volumen climático",
+        "🎯 Precio en VAL 593.88"
+      ],
+      "strength": "🔥 MUY ALTA",
+      "timestamp": "2026-04-12 15:05 (España)",
+      "risk": {
+        "leverage": 10,
+        "max_loss_usdt": 10.0,
+        "riesgo_pct": 1.0,
+        "position_size_usdt": 2329.35,
+        "capital_necesario": 232.94
+      }
+    },
     {
       "symbol": "BNBUSDT",
       "timeframe": "15m",
@@ -275,73 +305,9 @@
         "position_size_usdt": 3657.1,
         "capital_necesario": 365.71
       }
-    },
-    {
-      "symbol": "BTCUSDT",
-      "timeframe": "15m",
-      "direction": "LONG",
-      "entry_price": 71527.8,
-      "sl": 71322.0802,
-      "tp1": 71939.2396,
-      "tp2": 72869.4,
-      "rr_tp1": 2.0,
-      "rr_tp2": 6.52,
-      "confluences": 8,
-      "confluence_detail": [
-        "📊 RSI 36.7 zona de compra",
-        "🧱 Order Block alcista 71593.20-71670.00",
-        "🛡️ Soporte clave 71380.10",
-        "🌀 Fibonacci 0.786",
-        "🔧 Tweezer Bottom",
-        "⚡ Imbalance alcista 71588.60-71640.10",
-        "🎯 Precio en VAL 71447.20",
-        "😱 Fear & Greed: 16 (Extreme Fear) — miedo extremo"
-      ],
-      "strength": "🔥 MUY ALTA",
-      "timestamp": "2026-04-12 12:05 (España)",
-      "risk": {
-        "leverage": 10,
-        "max_loss_usdt": 10.0,
-        "riesgo_pct": 1.0,
-        "position_size_usdt": 3476.95,
-        "capital_necesario": 347.7
-      }
     }
   ],
-  "active_positions": [
-    {
-      "symbol": "BTCUSDT",
-      "direction": "LONG",
-      "entry_price": 71655.4,
-      "sl": 71170.9996,
-      "tp1": 72624.2008,
-      "tp2": 73593.0016
-    },
-    {
-      "symbol": "BTCUSDT",
-      "direction": "LONG",
-      "entry_price": 71517.2,
-      "sl": 71155.3593,
-      "tp1": 72240.8814,
-      "tp2": 72964.5628
-    },
-    {
-      "symbol": "BTCUSDT",
-      "direction": "LONG",
-      "entry_price": 71520.2,
-      "sl": 71160.5347,
-      "tp1": 72239.5306,
-      "tp2": 72958.8612
-    },
-    {
-      "symbol": "XRPUSDT",
-      "direction": "LONG",
-      "entry_price": 1.3323,
-      "sl": 1.3276,
-      "tp1": 1.3417,
-      "tp2": 1.3695
-    }
-  ],
+  "active_positions": [],
   "risk_config": {
     "capital_total": 1000,
     "riesgo_pct": 1.0
