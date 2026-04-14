@@ -15,6 +15,7 @@
     --red: #ff4466;
     --yellow: #ffd94a;
     --blue: #4488ff;
+    --orange: #ff8c42;
     --text: #c8d8f0;
     --muted: #4a6080;
     --mono: 'Space Mono', monospace;
@@ -151,7 +152,7 @@
     line-height: 1;
   }
 
-  .stat-value.small { font-size: 18px; margin-top: 4px; }
+  .stat-value.small { font-size: 16px; margin-top: 4px; line-height: 1.4; }
 
   .pairs {
     display: flex;
@@ -178,7 +179,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -200,6 +201,90 @@
     letter-spacing: 1px;
   }
 
+  /* ── Posiciones activas ── */
+  .positions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .position-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .position-card.long  { border-left: 3px solid var(--green); }
+  .position-card.short { border-left: 3px solid var(--red); }
+
+  .position-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    opacity: 0.3;
+  }
+
+  .position-card.long::after  { background: var(--green); }
+  .position-card.short::after { background: var(--red); }
+
+  .pos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .pos-symbol {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .pos-badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+
+  .pos-badge.long  { background: rgba(0,245,160,0.1); color: var(--green); border: 1px solid rgba(0,245,160,0.3); }
+  .pos-badge.short { background: rgba(255,68,102,0.1); color: var(--red);   border: 1px solid rgba(255,68,102,0.3); }
+
+  .pos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .pos-item { }
+
+  .pos-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+
+  .pos-value {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .pos-value.green { color: var(--green); }
+  .pos-value.red   { color: var(--red); }
+
+  /* ── Señales ── */
   .signals-list {
     display: flex;
     flex-direction: column;
@@ -431,7 +516,7 @@
   .refresh-progress {
     height: 100%;
     background: var(--blue);
-    animation: prog 60s linear infinite;
+    animation: prog 30s linear infinite;
   }
 
   @keyframes prog { from { width: 0% } to { width: 100% } }
@@ -444,6 +529,8 @@
     color: var(--muted);
     letter-spacing: 1px;
   }
+
+  .section-wrap { margin-bottom: 32px; }
 </style>
 </head>
 <body>
@@ -455,7 +542,7 @@
   <div class="header">
     <div class="header-left">
       <h1>Marco <span>Trading</span> Dashboard</h1>
-      <p>Bybit Futures · Análisis técnico en tiempo real</p>
+      <p>Bybit Futures · SMC · Análisis en tiempo real</p>
     </div>
     <div class="status-pill">
       <div class="status-dot" id="statusDot"></div>
@@ -465,7 +552,7 @@
 
   <div class="stats">
     <div class="stat-card">
-      <div class="stat-label">Señales hoy</div>
+      <div class="stat-label">Señales recientes</div>
       <div class="stat-value" id="signalsToday">—</div>
     </div>
     <div class="stat-card">
@@ -473,13 +560,24 @@
       <div class="stat-value" id="pairsCount">—</div>
     </div>
     <div class="stat-card">
-      <div class="stat-label">Última señal</div>
-      <div class="stat-value small" id="lastSignalTime">—</div>
+      <div class="stat-label">Posiciones abiertas</div>
+      <div class="stat-value" id="posCount">—</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Última actualización</div>
+      <div class="stat-value small" id="lastUpdate">—</div>
     </div>
   </div>
 
   <div class="pairs" id="pairsList"></div>
 
+  <!-- Posiciones activas -->
+  <div class="section-wrap" id="positionsWrap" style="display:none">
+    <div class="section-title">Posiciones abiertas</div>
+    <div class="positions-list" id="positionsList"></div>
+  </div>
+
+  <!-- Señales recientes -->
   <div class="section-title">Últimas señales</div>
   <div class="update-time" id="updateTime"></div>
   <div class="signals-list" id="signalsList">
@@ -490,7 +588,7 @@
   </div>
 
   <div class="footer">
-    Auto-refresco cada 60s · Solo para análisis técnico · Opera siempre con stop loss
+    Auto-refresco cada 30s · Solo para análisis técnico · Opera siempre con stop loss
   </div>
 
 </div>
@@ -506,21 +604,59 @@ function strengthClass(n) {
 }
 
 function strengthLabel(n) {
-  if (n >= 7) return '⚡ Muy alta';
-  if (n >= 5) return '▲ Alta';
+  if (n >= 7) return '🔥 Muy alta';
+  if (n >= 5) return '⚡ Alta';
   if (n >= 4) return '◆ Media';
   return '▼ Baja';
 }
 
-function fmt(p) {
-  if (p == null) return '—';
-  return '$' + parseFloat(p).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 4 });
+function fmt(p, decimals) {
+  if (p == null || p === '') return '—';
+  const d = decimals != null ? decimals : (parseFloat(p) > 100 ? 2 : 4);
+  return '$' + parseFloat(p).toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
 }
 
-function pct(entry, target) {
+function pctDiff(entry, target) {
   if (!entry || !target) return '';
   const p = (target - entry) / entry * 100;
   return (p >= 0 ? '+' : '') + p.toFixed(2) + '%';
+}
+
+// SL siempre muestra distancia como pérdida (valor negativo) sin importar dirección
+function pctSL(entry, sl) {
+  if (!entry || !sl) return '';
+  const p = Math.abs(sl - entry) / entry * 100;
+  return '-' + p.toFixed(2) + '%';
+}
+
+function renderPosition(p) {
+  const dir = (p.direction || '').toUpperCase();
+  const isLong = dir === 'LONG';
+  return `
+  <div class="position-card ${dir.toLowerCase()}">
+    <div class="pos-header">
+      <span class="pos-symbol">${p.symbol || '—'}</span>
+      <span class="pos-badge ${dir.toLowerCase()}">${dir}</span>
+    </div>
+    <div class="pos-grid">
+      <div class="pos-item">
+        <div class="pos-label">Entrada</div>
+        <div class="pos-value">${fmt(p.entry_price)}</div>
+      </div>
+      <div class="pos-item">
+        <div class="pos-label">Stop Loss</div>
+        <div class="pos-value red">${fmt(p.sl)}</div>
+      </div>
+      <div class="pos-item">
+        <div class="pos-label">TP1</div>
+        <div class="pos-value green">${fmt(p.tp1)}</div>
+      </div>
+      <div class="pos-item">
+        <div class="pos-label">TP2</div>
+        <div class="pos-value green">${fmt(p.tp2)}</div>
+      </div>
+    </div>
+  </div>`;
 }
 
 function renderSignal(s) {
@@ -530,17 +666,23 @@ function renderSignal(s) {
   const sl = strengthLabel(s.confluences);
   const rr = s.rr_tp2 || 0;
   const rrW = Math.min((rr / 5) * 100, 100);
-  const tf = s.timeframe ? (s.timeframe + (isNaN(s.timeframe) ? '' : 'm')) : '';
-  const ts = s.timestamp ? s.timestamp.replace('UTC','').trim() : '';
+
+  // Timeframe: ya viene como "15m", "60m", etc — mostrarlo tal cual
+  const tf = s.timeframe || '';
+
+  // Timestamp limpio — quitar UTC sobrante, mostrar tal cual viene del bot
+  const ts = (s.timestamp || '').replace(' UTC','').trim();
 
   const tp1Html = s.tp1 ? `
     <div class="price-item">
       <div class="price-label">TP1</div>
       <div class="price-value green">${fmt(s.tp1)}</div>
-      <div class="price-sub">${pct(s.entry_price, s.tp1)} · ${s.rr_tp1 || '—'}:1</div>
+      <div class="price-sub">${pctDiff(s.entry_price, s.tp1)} · RR ${s.rr_tp1 || '—'}:1</div>
     </div>` : '';
 
-  const confs = (s.confluence_detail || []).map(c => `<div class="conf-item">${c}</div>`).join('');
+  const confs = (s.confluence_detail || []).map(c =>
+    `<div class="conf-item">${c}</div>`
+  ).join('');
 
   return `
   <div class="signal-card ${dir.toLowerCase()}">
@@ -564,14 +706,14 @@ function renderSignal(s) {
         </div>
         <div class="price-item">
           <div class="price-label">Stop Loss</div>
-          <div class="price-value ${isLong ? 'red' : 'green'}">${fmt(s.sl)}</div>
-          <div class="price-sub">${pct(s.entry_price, s.sl)}</div>
+          <div class="price-value red">${fmt(s.sl)}</div>
+          <div class="price-sub">${pctSL(s.entry_price, s.sl)}</div>
         </div>
         ${tp1Html}
         <div class="price-item">
           <div class="price-label">TP2</div>
           <div class="price-value green">${fmt(s.tp2)}</div>
-          <div class="price-sub">${pct(s.entry_price, s.tp2)} · ${rr}:1</div>
+          <div class="price-sub">${pctDiff(s.entry_price, s.tp2)} · RR ${rr}:1</div>
         </div>
       </div>
 
@@ -595,27 +737,39 @@ async function loadData() {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const data = await r.json();
 
+    // Estado del bot
     const active = (data.bot_status || '').toUpperCase() === 'ACTIVO';
     document.getElementById('statusDot').className = 'status-dot' + (active ? '' : ' offline');
     document.getElementById('statusText').textContent = data.bot_status || '—';
 
+    // Stats
     document.getElementById('signalsToday').textContent = data.signals_today ?? '0';
     document.getElementById('pairsCount').textContent = (data.pairs_monitored || []).length;
 
-    const sigs = data.recent_signals || [];
-    if (sigs.length > 0 && sigs[0].timestamp) {
-      const t = sigs[0].timestamp.replace('UTC','').trim().split(' ')[1] || '—';
-      document.getElementById('lastSignalTime').textContent = t + ' UTC';
-    } else {
-      document.getElementById('lastSignalTime').textContent = 'Sin señales';
-    }
+    const positions = data.active_positions || [];
+    document.getElementById('posCount').textContent = positions.length;
 
+    // Última actualización — mostrar solo hora
+    const upd = (data.last_update || '—');
+    const updTime = upd.split(' ').slice(1).join(' '); // quitar la fecha, dejar hora + (España)
+    document.getElementById('lastUpdate').textContent = updTime || upd;
+    document.getElementById('updateTime').textContent = 'Actualizado: ' + upd;
+
+    // Pares monitoreados
     document.getElementById('pairsList').innerHTML =
       (data.pairs_monitored || []).map(p => `<span class="pair-tag">${p}</span>`).join('');
 
-    document.getElementById('updateTime').textContent =
-      'Actualizado: ' + (data.last_update || '—');
+    // Posiciones activas
+    const posWrap = document.getElementById('positionsWrap');
+    if (positions.length > 0) {
+      posWrap.style.display = '';
+      document.getElementById('positionsList').innerHTML = positions.map(renderPosition).join('');
+    } else {
+      posWrap.style.display = 'none';
+    }
 
+    // Señales recientes
+    const sigs = data.recent_signals || [];
     document.getElementById('signalsList').innerHTML = sigs.length
       ? sigs.map(renderSignal).join('')
       : `<div class="empty-state"><div class="empty-icon">📡</div><p>SIN SEÑALES RECIENTES · EL BOT ESTÁ ANALIZANDO</p></div>`;
@@ -629,7 +783,7 @@ async function loadData() {
 }
 
 loadData();
-setInterval(loadData, 60000);
+setInterval(loadData, 30000);
 </script>
 </body>
 </html>
